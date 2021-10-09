@@ -1,0 +1,8 @@
+.First_page {
+ background-image: url(../img/bg.png);
+position: fixed;
+min-width: 100%;
+min-height: 100%;
+background-size: cover;
+background-position: center;
+}

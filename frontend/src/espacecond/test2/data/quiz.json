@@ -1,0 +1,185 @@
+{
+  "data": [
+    {
+      "id":1,
+      "question": "A la vue de ce panneau,il faut :",
+      "choices": ["ralentir", "conserver la vitesse"],
+      "answer": "ralentir"
+    },
+    {
+      "id":2,
+      "question": "ce panneau indique :",
+      "choices": ["une pente", "une chaussée glissante"],
+      "answer": "une chaussée glissante"
+    },
+    {
+      "id":3,
+      "question": "La route va :",
+      "choices": ["tourner à gauche", "se rétrécir","tourner à droite"],
+      "answer": "tourner à gauche"
+    },
+    {
+      "id":4,
+      "question": "Ce panneau annonce",
+      "choices": ["une chaussée déformée", "des travaux"],
+      "answer": "des travaux"
+    },
+    {
+      "id":5,
+      "question": "Entre ces deux voitures, je peux stationner",
+      "choices": ["OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":6,
+      "question": "Par temps de pluie, la distance nécessaire pour s'arréter est :",
+      "choices": ["plus longue", "identique", "plus courte"],
+      "answer": "plus longue"
+    },
+    {
+      "id":7,
+      "question": "L'énervement du conducteur peut augmenter les risques d'accident :",
+      "choices": ["OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":8,
+      "question": "ce panneau indique :",
+      "choices": ["un poste de police", "un parking"],
+      "answer": "un parking"
+    },
+    {
+      "id":9,
+      "question": "Aprés ce panneau, je pourrai rouler à 80 km/h :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":10,
+      "question": "",
+      "choices": [ "je céde le passage à droite", "je passe le premier"],
+      "answer": "je passe le premier"
+    },
+    {
+      "id":11,
+      "question": "Le niveau de liquide de refroidissement",
+      "choices": [ "est correct", "il faudrait rajouter de l'eau","il faudrait rajouter un liquide spécial"],
+      "answer": "est correct"
+    },
+    {
+      "id":12,
+      "question": "Je dois m'arréter immédiatement pour porter secours:",
+      "choices": [ "OUI", "NON"],
+      "answer": "NON"
+    },
+    {
+      "id":13,
+      "question": "",
+      "choices": [ "Je continue encore sur cette voie", "Je m'engage maintenant"],
+      "answer": "Je m'insére derriére eux"
+    },
+    {
+      "id":14,
+      "question": "Je suis obligé de tourner à droite :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":15,
+      "question": "",
+      "choices": [ "Je peux augmenter ma vitesse", "Je serre à droite"],
+      "answer": "Je serre à droite"
+    },
+    {
+      "id":16,
+      "question": "Pour ralentir mon véhicule dans cette descente :",
+      "choices": [ "je rétrograde", "je me mets au point mort"],
+      "answer": "je rétrograde"
+    },
+    {
+      "id":17,
+      "question": "Cette voiture est restée en feux de route :",
+      "choices": [ "je ralentis", "je fais un appel lumineux","j'allume mes feux de route"],
+      "answer": "je ralentis"
+    },
+    {
+      "id":18,
+      "question": "La circulation est bloquée. Je laisse passer la voiture bleue :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":19,
+      "question": "",
+      "choices": [ "Je m'arrete", "je passe rapidement"],
+      "answer": "Je m'arrete"
+    },
+    {
+      "id":20,
+      "question": "Le niveau d'huile de cette voiture est correct :",
+      "choices": [ "OUI","NON"],
+      "answer": "NON"
+    },
+    {
+      "id":21,
+      "question": "Je suis bien placé pour prendre la sortie :",
+      "choices": ["OUI", "NON"],
+      "answer": "NON"
+    },
+    {
+      "id":22,
+      "question": "La ligne tracée à ma gauche peut étre franchie :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":23,
+      "question": "Le premier virage annoncé par le panneau est :",
+      "choices": [ "à droite", "à gauche"],
+      "answer": "à droite"
+    },
+    {
+      "id":24,
+      "question": "ce panneau indique :",
+      "choices": [ "endroit fréquenté par les enfants", "accés interdit aux piétons","passage pour piétons"],
+      "answer": "passage pour piétons"
+    },
+    {
+      "id":25,
+      "question": "si je suis surpris à cette vitesse , pour m'arréter il me faudra environ :",
+      "choices": [ "16 mètres","26 mètres", "36 mètres"],
+      "answer": "36 mètres"
+    },
+    {
+      "id":26,
+      "question": "Ce panneau indique :",
+      "choices": [ "une autoroute fermée", "une fin d'autoroute"],
+      "answer": "une fin d'autoroute"
+    },
+    {
+      "id":27,
+      "question": "Je roule à 40 km/h, je suis tenu dde ralentir :",
+      "choices": [ "OUI", "NON"],
+      "answer": "NON"
+    },
+    {
+      "id":28,
+      "question": "Je tourne à droite :",
+      "choices": [ "je passe avant les piétons", "je passe derriére les piétons"],
+      "answer": "je passe derriére les piétons"
+    },
+    {
+      "id":29,
+      "question": "Avant de dépasser, je peux faire un appel lumineux :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":30,
+      "question": "Avant de dépasser, j'avertis cet usager :",
+      "choices": [ "avec mon klaxon","avec mon appel lumineux"],
+      "answer": "avec mon klaxon"
+    }
+
+  ]
+}

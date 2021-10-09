@@ -1,0 +1,47 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.test .card {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+ 
+}
+
+.test label.radio {
+  display: block;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.tedt label.radio+.radio {
+  margin-left: 0;
+}
+
+.tedt label.radio input {
+  margin-right: 10px;
+}
+
+#bottoncours{
+  width: 200px;
+  height: 200px;
+  color: azure;
+  background-color: rgb(195, 1, 1);
+  margin: 50px;
+  border-radius: 250px;
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
