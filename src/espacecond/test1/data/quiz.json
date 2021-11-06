@@ -1,0 +1,185 @@
+{
+  "data": [
+    {
+      "id":1,
+      "question": "Pour dépasser,je peux suivre le véhicule noir:",
+      "choices": ["OUI", "NON"],
+      "answer": "NON"
+    },
+    {
+      "id":2,
+      "question": "Je tourne à gauche,Je céde le passage à la voiture venant en face",
+      "choices": ["OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":3,
+      "question": "Je suis bien placé pour stationner",
+      "choices": ["OUI", "NON"],
+      "answer": "NON"
+    },
+    {
+      "id":4,
+      "question": "à cette moment",
+      "choices": ["Je freine pa pressions successives", "j'exerce une pression continue sur le frein"],
+      "answer": "Je freine pa pressions successives"
+    },
+    {
+      "id":5,
+      "question": "",
+      "choices": ["Je m'arrete", "Je passe"],
+      "answer": "Je m'arrete"
+    },
+    {
+      "id":6,
+      "question": "la vitesse est limitée à :",
+      "choices": ["80 km/h", "90 km/h", "100 km/h", "110 km/h"],
+      "answer": "90 km/h"
+    },
+    {
+      "id":7,
+      "question": "L'interdiction de stationner commence :",
+      "choices": ["au panneau", "à 50 m", "à 150 m"],
+      "answer": "au panneau"
+    },
+    {
+      "id":8,
+      "question": "Je peux :",
+      "choices": ["aller tout droit", "tourner à gauche", "faire demi-tour"],
+      "answer": "tourner à gauche"
+    },
+    {
+      "id":9,
+      "question": "Je peux rouler sans feu :",
+      "choices": [ "OUI", "NON"],
+      "answer": "NON"
+    },
+    {
+      "id":10,
+      "question": "Pour dépasser ces cyclistes, je dois laiser un intervalle latéral minimum de :",
+      "choices": [ "0.50 métres", "1 métres","1.50 métres"],
+      "answer": "1 métres"
+    },
+    {
+      "id":11,
+      "question": "Placé ou je suis, je peux aller",
+      "choices": [ "à droite", "à gauche"],
+      "answer": "à gauche"
+    },
+    {
+      "id":12,
+      "question": "Dés que j'aurai croisé ce piéton, je devrai passer en feux de route:",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":13,
+      "question": "",
+      "choices": [ "Je dépasse les camions par la droite", "Je m'insére derriére eux"],
+      "answer": "Je m'insére derriére eux"
+    },
+    {
+      "id":14,
+      "question": "Je suis obligé de tourner à droite :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":15,
+      "question": "Pour consommer moins de carburant, je place mon chargement :",
+      "choices": [ "à l'intérieur de ma voiture", "sur le toit de ma voiture"],
+      "answer": "à l'intérieur de ma voiture"
+    },
+    {
+      "id":16,
+      "question": "La signalisation :",
+      "choices": [ "indique un rétrécissement", "oblige à tourner à gauche"],
+      "answer": "indique un rétrécissement"
+    },
+    {
+      "id":17,
+      "question": "Dans cette rue, je peux rouler :",
+      "choices": [ "en feux deposition uniquement", "en feux de croisement","en feux de route"],
+      "answer": "en feux de croisement"
+    },
+    {
+      "id":18,
+      "question": "La circulation est bloquée. Je laisse passer la voiture bleue :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":19,
+      "question": "",
+      "choices": [ "Je m'arrete et laisse traverser les piétons", "Je prend la voie de gauche et je passe"],
+      "answer": "Je m'arrete et laisse traverser les piétons"
+    },
+    {
+      "id":20,
+      "question": "",
+      "choices": [ "Je ralentis", "Je maintiens mon allure","J'accélère"],
+      "answer": "Je maintiens mon allure"
+    },
+    {
+      "id":21,
+      "question": "Je céde le passage au véhicule venant de droite :",
+      "choices": ["OUI", "NON"],
+      "answer": "NON"
+    },
+    {
+      "id":22,
+      "question": "Je laisse passer les véhicules qui viennent en face :",
+      "choices": [ "OUI", "NON"],
+      "answer": "OUI"
+    },
+    {
+      "id":23,
+      "question": "Le premier virage annoncé par le panneau est :",
+      "choices": [ "à droite", "à gauche"],
+      "answer": "à droite"
+    },
+    {
+      "id":24,
+      "question": "j' utilise plutot :",
+      "choices": [ "le frein moteur", "le frein principale"],
+      "answer": "le frein moteur"
+    },
+    {
+      "id":25,
+      "question": "je ralentis :",
+      "choices": [ "immédiatement", "au niveau de cassis seulement"],
+      "answer": "immédiatement"
+    },
+    {
+      "id":26,
+      "question": "De ce poste annoncé, je peux appeler :",
+      "choices": [ "les secours", "un garagiste","un ami"],
+      "answer": "les secours"
+    },
+    {
+      "id":27,
+      "question": "Le stationnement est interdit aux :",
+      "choices": [ "caravanes", "camionnettes","camions","autocars"],
+      "answer": "camions"
+    },
+    {
+      "id":28,
+      "question": "Je peux :",
+      "choices": [ "continuer tout droit", "tourner à droite"],
+      "answer": "tourner à droite"
+    },
+    {
+      "id":29,
+      "question": "La limitation de vitesse prend effet :",
+      "choices": [ "immédiatement", "à 150 m","dans le prochain virage"],
+      "answer": "immédiatement"
+    },
+    {
+      "id":30,
+      "question": "",
+      "choices": [ "je ralentis et je passe", "je m'arrete","je passe sans ralentir"],
+      "answer": "je m'arrete"
+    }
+
+  ]
+}
