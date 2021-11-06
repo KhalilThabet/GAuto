@@ -1,0 +1,17 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.733);
+    border-top:2px solid rgba(0, 0, 0, 0.541);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    font-size: 25px;
+}
+.icon {
+    color: rgb(255, 255, 255);
+    margin-left: 20px ;
+}
+p {
+    text-align: center;
+    font-size: 15px;
+}

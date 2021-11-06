@@ -1,0 +1,42 @@
+.show {
+    display: block;
+    transition: 800ms;
+    opacity: 1;
+}
+.activeshow {
+    transform: translateY(100px) scale(0) rotateY(180deg) ;
+    opacity: 0;
+}
+.form_box_solid {  
+position: static;
+margin: 8% auto;
+min-height: 30%;
+width: 30%;
+box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+background: rgba(0, 0, 0, 0.747);
+padding: 0px 0px 5px 15px;
+box-sizing: border-box;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+}
+.form {
+    align-items: center;
+    align-content: center;
+    align-self:center;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.login-text {
+    color: aliceblue;
+    text-align: center;
+}
+.login-btn{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.login-btn:hover{
+    background-color: rgb(189, 5, 5);
+    border-radius: 5px;
+}
