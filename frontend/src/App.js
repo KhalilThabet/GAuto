@@ -2,9 +2,9 @@ import React ,{useState} from 'react';
 import {Route ,Switch} from 'react-router-dom';
 import Home from './home1/components/First_page.js'; 
 import './App.css';
-import Acceuiladmin from './espaceadmin/acceuiladmin.js';
-import Acceuilcand from './espacecond/acceuilcandidat.js';
-import Acceuilemp from './espaceadmin/acceuilemp.js'
+import Acceuiladmin from './AdminSection/Desktop';
+import Acceuilcand from './UserSection/Desktop';
+import Acceuilemp from './AdminSection/DesktopStaff'
 import 'semantic-ui-css/semantic.min.css'
 //routing 
 //on declare les variables genrales pour faire des liaisons entre le components
