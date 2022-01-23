@@ -6,18 +6,17 @@ import Formajouter from './formajouter'
 
 
 
-function Ajouteremp() {
+function AddStaff() {
     const [open, setOpen] = React.useState(false)
     return (
         <Modal
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             open={open}
-            trigger={<button id='ajouter'> Ajouter </button>}
+            trigger={<button id='Add'> Add </button>}
         >
-            <Modal.Header>Ajouter un employee</Modal.Header>
+            <Modal.Header>Add an employee</Modal.Header>
             <Modal.Content image>
-
                 <Modal.Description>
                     <Formajouter />
                 </Modal.Description>
@@ -27,4 +26,4 @@ function Ajouteremp() {
     )
 }
 
-export default Ajouteremp
+export default AddStaff

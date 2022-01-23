@@ -8,29 +8,27 @@ import {
 
 
 
-import Navbarcond from './navbarcond.js'
-import Espacecour from './espacecour.js'
-import Bodyinfo from './bodyinfo.js'
+import Navbar from './Navbar.js'
+import CourseSection from './CourseSection'
+import Informations from './Informations'
 import Footer from "../home1/components/Footer.js";
 import './style.css'
 
 
-export default function Acceuilcand({authorized,idcon}) {
+export default function Acceuilcand({authorized,IdCandidate}) {
   if(!authorized){
     return <Redirect to='/'/>
   }
   return (
     <Router>
       <div className='acceuil_candidat'>
-        <Navbarcond/>
-
-       
+        <Navbar/>
         <Switch>
           <Route path="/lestest">
-            <Espacecour />
+            <CourseSection />
           </Route>
           <Route path="/condidat">
-            <Bodyinfo cinpersonnel={idcon}/>
+            <Informations PersonnelCIN={IdCandidate}/>
           </Route>
         </Switch>
       </div>

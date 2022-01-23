@@ -1,13 +1,9 @@
 import {React,  Component } from 'react';
 import { Link } from 'react-router-dom'
 import './style.css';
-import logo from './logo.png'
+import Logo from './CompagnyLogo.png'
 
-
-
-
-
-class Navbarcond extends Component
+class Navbar extends Component
 {
     
     render(){
@@ -15,18 +11,18 @@ class Navbarcond extends Component
         
             <div className='navbar'>
                <nav className='container'>
-               <img src={logo} alt="logo" id='logo' ></img>
+               <img src={Logo} alt="logo" id='logo' ></img>
                     <ul><br></br>
                        <li>
-                           <Link to='/condidat'>information personnel</Link> 
-                           <Link to='/lestest'>cours</Link> 
+                           <Link to='/condidat'>Informations</Link> 
+                           <Link to='/lestest'>Take a Test</Link> 
                       </li>
                     </ul>
-                    <div id="nomdecompte">Bienvenu </div>
+                    <div id="nomdecompte">Welcome</div>
               </nav>
             </div>
           
         )
     }
 }
-export default Navbarcond
+export default Navbar

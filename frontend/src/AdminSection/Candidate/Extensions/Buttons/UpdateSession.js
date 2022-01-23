@@ -1,15 +1,10 @@
 import {React,useState } from 'react';
-import Popup from '../bouttonajouter/popup.js';
-import Updateseance from './updateseance';
-import iconmodifier from './mod.png';
+import Popup from '../Windows/Window.js';
+import UpdateSession from '../UpdateSession';
+import Icon from '../icons/mod.png';
 import '../stylecompocondidat.css'
-
-/* le code css de button est ecrit dans stylecompocondidat.css
- dans un bloc special a partir de ligne 49 */
-
-
  
-function Buttonupdateseance({cin1}) {
+function UpdateSessionBtn({CIN}) {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,13 +13,13 @@ function Buttonupdateseance({cin1}) {
   }
 
   return <div>
-    <button onClick={togglePopup} ><img src={iconmodifier} id="re" alt="icon" ></img></button>
+    <button onClick={togglePopup} ><img src={Icon} id="re" alt="icon" ></img></button>
     
     {isOpen && <Popup
       content={<>
       <div id='styleformaj'>
-        <b>saisir la prochaine seance </b>
-        <p id='st' ><Updateseance idp={cin1} /></p>
+        <b>Log the next session </b>
+        <p id='st' ><UpdateSession ID={CIN} /></p>
         </div>
       </>}
       handleClose={togglePopup}
@@ -32,4 +27,4 @@ function Buttonupdateseance({cin1}) {
   </div>
 }
 
-export default Buttonupdateseance;
+export default UpdateSessionBtn;

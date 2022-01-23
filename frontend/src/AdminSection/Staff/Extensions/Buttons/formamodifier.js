@@ -3,7 +3,7 @@ import '../../style2.css'
 import { useHistory } from 'react-router';
 
 export default function Formajouter() {
-    const history=useHistory();
+    const History=useHistory();
     const [isLoaded, setIsLoaded] = useState(false);
     const[id1,setid1]=useState('');
     const[id2,setid2]=useState('');
@@ -16,8 +16,8 @@ export default function Formajouter() {
             )
                 .then(data => {
                     setIsLoaded(true)
-                    setid1(data.cin)
-                    setid2(data.password)
+                    setid1(data.CIN)
+                    setid2(data.Password)
                 })
                 .catch(err => {
                     console.log(err)
@@ -27,8 +27,8 @@ export default function Formajouter() {
             )
                 .then(data => {
                     setIsLoaded(true)
-                    setid3(data.cin);
-                    setid4(data.password);
+                    setid3(data.CIN);
+                    setid4(data.Password);
                 })
                 .catch(err => {
                     console.log(err)
@@ -58,15 +58,15 @@ export default function Formajouter() {
             .then(json => {
                 console.log(json)
             })
-            .catch(err => console.log(err));history.push('/employe/save') }
+            .catch(err => console.log(err));History.push('/employe/save') }
 
     }
     const handlemodemp = () => {
         var empuser = document.getElementById('useremp').value;
         var emppassword = document.getElementById('passwdemp').value;
         const data = {
-            cin: empuser,
-            password: emppassword,
+            CIN: empuser,
+            Password: emppassword,
         };
         if(empuser===''){alert('l operation est inccorect !')}
         else{
@@ -82,7 +82,7 @@ export default function Formajouter() {
             .then(json => {
                 console.log(json)
             })
-            .catch(err => console.log(err));history.push('/employe/save') }
+            .catch(err => console.log(err));History.push('/employe/save') }
 
     }
 
@@ -97,11 +97,11 @@ export default function Formajouter() {
                             <td>CIN :</td>
                             <td>{id1}</td>
                             <td><input size="10" type='text' id='user' required></input> </td>
-                            <td rowSpan={2}><button id='bott'onClick={handlemoddir} >Modifier</button></td>
+                            <td rowSpan={2}><button id='bott'onClick={handlemoddir} >Modify</button></td>
                             
                         </tr>
                         <tr>
-                            <td>Mot De Passe :</td>
+                            <td>Password :</td>
                             <td>{id2}</td>
                             <td><input size="10" type='text' id='passwd' placeholder="" required></input> </td>
                         </tr>
@@ -117,10 +117,10 @@ export default function Formajouter() {
                             <td>CIN :</td>
                             <td>{id3}</td>
                             <td><input size="10" type='text' id='useremp' required></input> </td>
-                            <td rowSpan={2}><button id='bott' onClick={handlemodemp}>Modifier</button></td>
+                            <td rowSpan={2}><button id='bott' onClick={handlemodemp}>Modify</button></td>
                         </tr>
                         <tr>
-                            <td>Mot De Passe :</td>
+                            <td>Password :</td>
                             <td>{id4}</td>
                             <td><input size="10" type='text' id='passwdemp' placeholder="" required></input> </td>
                         </tr>

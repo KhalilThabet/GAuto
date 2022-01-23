@@ -1,14 +1,11 @@
 import {React,useState } from 'react';
 import Popup from '../Windows/Window.js';
-import iconmodifier from './mod.png';
+import iconmodifier from '../icons/mod.png';
 import '../stylecompocondidat.css'
-import Updateexamen from '../UpdateExam.js';
-/* le code css de button est ecrit dans stylecompocondidat.css
- dans un bloc special a partir de ligne 49 */
-
+import UpdateExam from '../UpdateExam.js';
 
  
-function Buttonupdateexamen({cin3}) {
+function UpdateExamBtn({CIN}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -22,7 +19,7 @@ function Buttonupdateexamen({cin3}) {
       content={<>
       <div id='styleformaj'>
         <b>saisir la prochaine seance </b>
-        <p id='st' ><Updateexamen ide={cin3} /></p>
+        <p id='st' ><UpdateExam ID={CIN} /></p>
        </div>
       </>}
       handleClose={togglePopup}
@@ -30,4 +27,4 @@ function Buttonupdateexamen({cin3}) {
   </div>
 }
 
-export default Buttonupdateexamen;
+export default UpdateExamBtn;

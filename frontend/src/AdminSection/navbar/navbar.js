@@ -4,10 +4,8 @@ import './navbar.css';
 import logo from './icon/logo.png'
 
 
-class Nav extends Component
+class NavBar extends Component
 {
-
-    
     render(){
         return(
         
@@ -18,9 +16,9 @@ class Nav extends Component
                     <ul>
                         <br></br>
                        <li>
-                         <Link to="/gcondidat" >Gestion condidat</Link> 
-                         <Link to="/vehicule" >Gestion vehicule</Link> 
-                         <Link to="/employe" >Gestion Employes</Link>
+                         <Link to="/gcondidat" >Candidate Management</Link> 
+                         <Link to="/vehicule" >Vehicules Management</Link> 
+                         <Link to="/employe" >RH Management</Link>
                       </li>
                  </ul>
               </nav>
@@ -29,4 +27,4 @@ class Nav extends Component
         )
     }
 }
-export default Nav
+export default NavBar

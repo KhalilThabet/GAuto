@@ -1,21 +1,21 @@
 import { React } from 'react';
-import '../stylecompocondidat.css'
+import './stylecompocondidat.css'
 import { useHistory } from 'react-router';
 
-export default function Updateexamen({ide}) {
-    const history=useHistory();
-    const handlesubmit = () => {
-        let date = document.getElementById('exdate').value;
-        let time = document.getElementById('exheure').value;
-        let type = document.getElementById('extype').value;
+export default function UpdateExam({ID}) {
+    const History=useHistory();
+    const HandleSubmit = () => {
+        let Date = document.getElementById('TempDate').value;
+        let Time = document.getElementById('TempTime').value;
+        let Type = document.getElementById('TempType').value;
         const data = {
-            dateExam: date,
-            heureExam: time,
-            typeExam: type
+            DateExam: Date,
+            TimeExam: Time,
+            TypeExam: Type
         };
-        if(date===''){alert('la date d examen prochaine est vide')}
+        if(Date===''){alert('Invalid Operation : Date of the next exam is Empty !')}
         else {
-        fetch(`http://localhost:8000/api/candidats/examens/${ide}`,
+        fetch(`http://localhost:8000/api/candidats/examens/${ID}`,
             {
                 method: 'PUT',
                 headers: {
@@ -24,7 +24,7 @@ export default function Updateexamen({ide}) {
                 body: JSON.stringify(data)
             })
             .then((res) => res.json());}
-        history.push('/gcondidat/save')
+        History.push('/gcondidat/save')
     }
 
     return (
@@ -33,23 +33,23 @@ export default function Updateexamen({ide}) {
                 <table >
                     <tbody >
                         <tr>
-                            <td>date </td>
-                            <td><input type='date' id='exdate' required></input> </td>
+                            <td>Date :</td>
+                            <td><input type='date' id='TempDate' required></input> </td>
                         </tr>
                         <tr>
-                            <td>heure</td>
-                            <td><input type='time' id='exheure' required></input> </td>
+                            <td>Time :</td>
+                            <td><input type='time' id='TempTime' required></input> </td>
                         </tr>
                         <tr>
-                            <td>type d'examen </td>
-                            <td><select id='extype'>
+                            <td>Type Of Exam :</td>
+                            <td><select id='TempType'>
                                 <option value='code' selected>Code</option>
-                                <option value='conduit'>Conduit</option>  
+                                <option value='conduit'>Driving</option>  
 
                             </select> </td>
 
                         </tr>
-                        <button id='boo3' onClick={handlesubmit}>confirmer</button>
+                        <button id='boo3' onClick={HandleSubmit}>Confirm</button>
 
                     </tbody>
                 </table>

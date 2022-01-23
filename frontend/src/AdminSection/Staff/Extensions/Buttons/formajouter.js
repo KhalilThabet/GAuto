@@ -3,25 +3,25 @@ import '../../style2.css'
 import { useHistory } from 'react-router';
 
 export default function Formajouter() {
-    const history=useHistory();
-    const handleempajoute = () => {
-        var enom = document.getElementById('empnom').value;
-        var eprenom = document.getElementById('empprenom').value;
-        var ecin = document.getElementById('empcin').value;
-        var eposte = document.getElementById('empposte').value;
-        var esalaire = document.getElementById('empsalaire').value;
-        var etel = document.getElementById('emptel').value;
-        var eservice = document.getElementById('empservice').value;
+    const History=useHistory();
+    const HandleStaffAdd = () => {
+        var TempLName = document.getElementById('TempLName').value;
+        var TempFName = document.getElementById('TempFName').value;
+        var TempCIN = document.getElementById('TempCIN').value;
+        var TempPosition = document.getElementById('TempPosition').value;
+        var TempSalary = document.getElementById('TempSalary').value;
+        var TempPhoneNumber = document.getElementById('TempPhoneNumber').value;
+        var TempService = document.getElementById('TempService').value;
         const data = {
-            nom: enom,
-            prenom: eprenom,
-            cin: ecin,
-            salaire: esalaire,
-            poste: eposte,
-            telephone: etel,
-            service: eservice
+            LastName: TempLName,
+            FirstName: TempLName,
+            CIN: TempCIN,
+            Salary: TempSalary,
+            Position: TempPosition,
+            PhoneNumber: TempPhoneNumber,
+            Service: TempService
         };
-        if(ecin===''){alert('l operation est inccorect !')}
+        if(TempCIN===''){alert('Invalid Operation !')}
         else{
         fetch('http://localhost:8000/api/employees', {
             method: "POST",
@@ -35,7 +35,7 @@ export default function Formajouter() {
             .then(json => {
                 console.log(json)
             })
-            .catch(err => console.log(err));history.push('/employe/save') }
+            .catch(err => console.log(err));History.push('/employe/save') }
 
     }
 
@@ -46,37 +46,37 @@ export default function Formajouter() {
                 <table>
                     <tbody>
                         <tr>
-                            <td>Nom :</td>
-                            <td><input size="10" type='text' id='empnom' required></input> </td>
+                            <td>Last Name :</td>
+                            <td><input size="10" type='text' id='TempLName' required></input> </td>
                         </tr>
                         <tr>
-                            <td>Prenom :</td>
-                            <td><input size="10" type='text' id='empprenom' placeholder="" required></input> </td>
+                            <td>First Name :</td>
+                            <td><input size="10" type='text' id='TempFName' placeholder="" required></input> </td>
                         </tr>
                         <tr>
                             <td>CIN :</td>
-                            <td><input size="10" type='text' id='empcin' placeholder="" required></input> </td>
+                            <td><input size="10" type='text' id='TempCIN' placeholder="" required></input> </td>
                         </tr>
                         <tr>
-                            <td>TEL :</td>
-                            <td><input size="10" type='text' id='emptel' placeholder="" required></input> </td>
+                            <td>Phone Number :</td>
+                            <td><input size="10" type='text' id='TempPhoneNumber' placeholder="" required></input> </td>
                         </tr>
                         <tr>
-                            <td>Poste :</td>
-                            <td><input size="10" type='text' id='empposte' required></input> </td>
+                            <td>Position :</td>
+                            <td><input size="10" type='text' id='TempPosition' required></input> </td>
                         </tr>
                         <tr>
-                            <td>Salaire :</td>
-                            <td><input size="10" type='text' id='empsalaire' placeholder="" required></input> </td>
+                            <td>Salary :</td>
+                            <td><input size="10" type='text' id='TempSalary' placeholder="" required></input> </td>
                         </tr>
                         <tr>
-                            <td>en service :</td>
-                            <td><select id='empservice'><option value='hors service'>hors service</option><option value='en service' selected>en service</option> </select> </td>
+                            <td>In Service :</td>
+                            <td><select id='TempService'><option value='hors service'>Out Of Order</option><option value='en service' selected>In Service</option> </select> </td>
                         </tr>
                     </tbody>
                 </table>
             </form>
-            <button id='bott' onClick={handleempajoute}>ajouter</button>
+            <button id='bott' onClick={HandleStaffAdd}>Add</button>
         </div>
     )
 }

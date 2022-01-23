@@ -1,115 +1,114 @@
 import { React } from 'react'
-import './stylecompocondidat.css'
-import iconplus from './bouttonajouter/icon/plus.png';
-import iconmoins from './bouttonajouter/icon/moins.png';
+import '../stylecompocondidat.css'
+import PlusIcon from '../icons/plus.png';
+import MinusIcon from '../icons/moins.png';
 import { useHistory } from 'react-router';
-//on pose que le prix de scence code=10dt et de conduit=40dt et pour l examen de code=70dt et conduit=120dt
 
-export default function Paiement({ ident, ncod, ncon, nexcod, nexcon, mp, mrp }) {
-    const history = useHistory();
-    const NbConduiteMoins = () => {
-        fetch(`http://localhost:8000/api/candidats/nbSessionconduit/${ident}`,
+export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSessions, NumberOfCodeExams, NumberOfDrivingExams, AmountPaid, RemaingPayment }) {
+    const History = useHistory();
+    const ReduceNumberOfDrivingSessions = () => {
+        fetch(`http://localhost:8000/api/candidats/nbSessionconduit/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbConduite": ncon - 1, "MontantResteAPayer": mrp - 40 })
+                body: JSON.stringify({ "NumberOfDrivingSessions": NumberOfDrivingSessions - 1, "RemaingPayment": RemaingPayment - 40 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
-    const NbCodeMoins = () => {
-        fetch(`http://localhost:8000/api/candidats/nbSessioncode/${ident}`,
+    const ReduceNumberOfCodesSessions = () => {
+        fetch(`http://localhost:8000/api/candidats/nbSessioncode/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbCode": ncod - 1, "MontantResteAPayer": mrp - 10 })
+                body: JSON.stringify({ "NumberOfCodeSessions": NumberOfCodeSessions - 1, "RemaingPayment": RemaingPayment - 10 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
-    const NbExamenConduiteMoins = () => {
-        fetch(`http://localhost:8000/api/candidats/nbExamconduite/${ident}`,
+    const ReduceNumberOfDrivingExams = () => {
+        fetch(`http://localhost:8000/api/candidats/nbExamconduite/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbExamConduite": nexcon - 1, "MontantResteAPayer": mrp - 120 })
+                body: JSON.stringify({ "NumberOfDrivingExams": NumberOfDrivingExams - 1, "RemaingPayment": RemaingPayment - 120 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
-    const NbExamenCodeMoins = () => {
-        fetch(`http://localhost:8000/api/candidats/nbExamcode/${ident}`,
+    const ReduceNumberOfCodesExams = () => {
+        fetch(`http://localhost:8000/api/candidats/nbExamcode/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbExamCode": nexcod - 1, "MontantResteAPayer": mrp - 70 })
+                body: JSON.stringify({ "NumberOfCodeExams": NumberOfCodeExams - 1, "RemaingPayment": RemaingPayment - 70 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
-    const NbConduitePlus = () => {
-        fetch(`http://localhost:8000/api/candidats/nbSessionconduit/${ident}`,
+    const AugmentNumberOfDrivingSessions = () => {
+        fetch(`http://localhost:8000/api/candidats/nbSessionconduit/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbConduite": ncon + 1, "MontantResteAPayer": mrp + 40 })
+                body: JSON.stringify({ "NumberOfDrivingSessions": NumberOfDrivingSessions + 1, "RemaingPayment": RemaingPayment + 40 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
-    const NbCodePlus = () => {
-        fetch(`http://localhost:8000/api/candidats/nbSessioncode/${ident}`,
+    const AugmentNumberOfCodesSessions = () => {
+        fetch(`http://localhost:8000/api/candidats/nbSessioncode/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbCode": ncod + 1, "MontantResteAPayer": mrp + 10 })
+                body: JSON.stringify({ "NumberOfCodeSessions": NumberOfCodeSessions + 1, "RemaingPayment": RemaingPayment + 10 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
-    const NbExamenConduitePlus = () => {
-        fetch(`http://localhost:8000/api/candidats/nbExamconduite/${ident}`,
+    const AugmentNumberOfDrivingExams = () => {
+        fetch(`http://localhost:8000/api/candidats/nbExamconduite/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbExamConduite": nexcon + 1, "MontantResteAPayer": mrp + 120 })
+                body: JSON.stringify({ "NumberOfDrivingExams": NumberOfDrivingExams + 1, "RemaingPayment": RemaingPayment + 120 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
-    const NbExamenCodePlus = () => {
-        fetch(`http://localhost:8000/api/candidats/nbExamcode/${ident}`,
+    const AugmentNumberOfCodesExams = () => {
+        fetch(`http://localhost:8000/api/candidats/nbExamcode/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "nbExamCode": nexcod + 1, "MontantResteAPayer": mrp + 70 })
+                body: JSON.stringify({ "NumberOfCodeExams": NumberOfCodeExams + 1, "RemaingPayment": RemaingPayment + 70 })
             })
-            .then((res) => res.json()); history.push('/gcondidat/save')
+            .then((res) => res.json()); History.push('/gcondidat/save')
     }
     const MontantPayeePlus = () => {
-        let argent = document.getElementById('montant').value;
-        if(argent===''){alert("l operation est incorrect !")}
+        let Money = document.getElementById('Amount').value;
+        if(Money===''){alert("Invalid Operation !")}
         else {
-        let ss = parseFloat(argent) + mp
-        let dd = mrp - parseFloat(argent)
-        fetch(`http://localhost:8000/api/candidats/montantpayee/${ident}`,
+        let ss = parseFloat(Money) + AmountPaid
+        let dd = RemaingPayment - parseFloat(Money)
+        fetch(`http://localhost:8000/api/candidats/montantpayee/${ID}`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "MontantPayer": ss, "MontantResteAPayer": dd })
+                body: JSON.stringify({ "AmountPaid": ss, "AmountRemaining": dd })
             })
-            .then((res) => res.json());} history.push('/gcondidat/save')
+            .then((res) => res.json());} History.push('/gcondidat/save')
     }
 
 
@@ -117,43 +116,43 @@ export default function Paiement({ ident, ncod, ncon, nexcod, nexcon, mp, mrp })
     return (
         <div>
             <fieldset className='paiementsection'>
-                <legend><h1>information de paiement </h1></legend>
+                <legend><h1>Payement Informations </h1></legend>
                 <table>
                     <tbody>
                         <tr>
-                            <td>nombre de sience de code :</td>
-                            <td>{ncod}</td>
-                            <td> <button onClick={NbCodeMoins}><img src={iconmoins} alt="icon moins" id="re" ></img></button></td>
-                            <td> <button onClick={NbCodePlus}><img src={iconplus} alt="icon plus" id="re"></img></button></td>
+                            <td>Number Of Code Sessions :</td>
+                            <td>{NumberOfCodeSessions}</td>
+                            <td> <button onClick={ReduceNumberOfCodesSessions}><img src={MinusIcon} alt="icon moins" id="re" ></img></button></td>
+                            <td> <button onClick={AugmentNumberOfCodesSessions}><img src={PlusIcon} alt="icon plus" id="re"></img></button></td>
 
                         </tr>
                         <tr>
-                            <td>nombre de sience de conduit :</td>
-                            <td>{ncon}</td>
-                            <td> <button onClick={NbConduiteMoins}><img src={iconmoins} alt="icon moins"  id="re" ></img></button></td>
-                            <td> <button onClick={NbConduitePlus}><img src={iconplus} alt="icon plus" id="re"></img></button></td>
+                            <td>Number Of Driving Sessions :</td>
+                            <td>{NumberOfDrivingSessions}</td>
+                            <td> <button onClick={ReduceNumberOfDrivingSessions}><img src={MinusIcon} alt="icon moins"  id="re" ></img></button></td>
+                            <td> <button onClick={AugmentNumberOfDrivingSessions}><img src={PlusIcon} alt="icon plus" id="re"></img></button></td>
                         </tr>
                         <tr>
-                            <td>nombre d'examen code :</td>
-                            <td>{nexcod}</td>
-                            <td> <button onClick={NbExamenCodeMoins}><img src={iconmoins} alt="icon moins"  id="re" ></img></button></td>
-                            <td> <button onClick={NbExamenCodePlus}><img src={iconplus} alt="icon plus" id="re"></img></button></td>
+                            <td>Number Of Code Exams :</td>
+                            <td>{NumberOfCodeExams}</td>
+                            <td> <button onClick={ReduceNumberOfCodesExams}><img src={MinusIcon} alt="icon moins"  id="re" ></img></button></td>
+                            <td> <button onClick={AugmentNumberOfCodesExams}><img src={PlusIcon} alt="icon plus" id="re"></img></button></td>
                         </tr>
                         <tr>
-                            <td>nombre d'examen conduit :</td>
-                            <td>{nexcon}</td>
-                            <td> <button onClick={NbExamenConduiteMoins}><img src={iconmoins} alt="icon moins"  id="re" ></img></button></td>
-                            <td> <button onClick={NbExamenConduitePlus}><img src={iconplus} alt="icon plus" id="re"></img></button></td>
+                            <td>Number Of Driving Exams :</td>
+                            <td>{NumberOfDrivingExams}</td>
+                            <td> <button onClick={ReduceNumberOfDrivingExams}><img src={MinusIcon} alt="icon moins"  id="re" ></img></button></td>
+                            <td> <button onClick={AugmentNumberOfDrivingExams}><img src={PlusIcon} alt="icon plus" id="re"></img></button></td>
                         </tr>
                         <tr>
-                            <td>le montant payée :</td>
-                            <td>{mp}</td>
-                            <td><input size="10" type='text' id='montant' placeholder="ajouter montant"></input> </td>
-                            <td> <button onClick={MontantPayeePlus}><img src={iconplus} alt="icon plus"  id="re"></img></button></td>
+                            <td>Amount Of Money Paid :</td>
+                            <td>{AmountPaid}</td>
+                            <td><input size="10" type='text' id='Amount' placeholder="Add Amount"></input> </td>
+                            <td> <button onClick={MontantPayeePlus}><img src={PlusIcon} alt="icon plus"  id="re"></img></button></td>
                         </tr>
                         <tr>
-                            <td>le montant reste à payée :</td>
-                            <td>{mrp}</td>
+                            <td>Amount Remaining To Be Paid:</td>
+                            <td>{RemaingPayment}</td>
                         </tr>
                     </tbody>
                 </table>

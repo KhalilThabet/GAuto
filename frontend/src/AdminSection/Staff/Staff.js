@@ -1,10 +1,10 @@
 import { React, useState, useEffect } from 'react';
 import './style2.css'
-import Pop from './Extensions/popupemp.js'
-import Ajouteremp from './Extensions/button ajouteremp/ajouteremp.js';
-import Buttonmod from './Extensions/Buttons/button';
+import Window from './Extensions/Windows/Window.js'
+import AddStaff from './Extensions/Buttons/AddStaff';
+import PriviledgeBtn from './Extensions/Buttons/Priviledge';
 
-export default function Emp1() {
+export default function Staff() {
   const [searchteam, setsearchteam] = useState("");
   const [datas, setdatas] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -28,27 +28,27 @@ export default function Emp1() {
     <div>
       <fieldset className='infoemp'>
         <div className='blocrechercheemp'>
-          <input type='text' id='rechercheemp' placeholder='Rechercher (Nom)' onChange={event => { setsearchteam(event.target.value) }} />
-          <Ajouteremp /> <Buttonmod />
+          <input type='text' id='rechercheemp' placeholder='Search (Name)' onChange={event => { setsearchteam(event.target.value) }} />
+          <AddStaff /> <PriviledgeBtn />
           <br></br>
           <table>
             <tbody>
               <tr>
                 <td id='tvempii'> CIN </td>
-                <td id='tvempii'> NOM ET PRENOM</td>
-                <td id='tvempii'> TELEPHONE </td>
-                <td id='tvempii'> POSTE </td>
-                <td id='tvempii'> SALAIRE</td>
+                <td id='tvempii'> FIRSTNAME - LASTNAME </td>
+                <td id='tvempii'> PHONENUMBER </td>
+                <td id='tvempii'> POSITION </td>
+                <td id='tvempii'> SALARY</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         {datas.filter((val) => {
-          return val.nom.toLowerCase().startsWith(searchteam.toLowerCase());
+          return val.FirstName.toLowerCase().startsWith(searchteam.toLowerCase());
         }).map((val, key) => {
-          return (<div key='val.cin' id='listeemp'>
-            <Pop cin={val.cin} nom={val.nom} prenom={val.prenom} tel={val.telephone} poste={val.poste} salaire={val.salaire} service={val.service} />
+          return (<div key='val.CIN' id='listeemp'>
+            <Window CIN={val.CIN} LastName={val.LastName} FirstName={val.FirstName} PhoneNumber={val.PhoneNumber} Position={val.Position} Salary={val.Salary} Service={val.Service} />
 
           </div>)
         })}

@@ -6,11 +6,11 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import'./acceuiladmin.css'
+import'./Desktop.css'
 import Refreshcond from "../refresh/refreshcond.js";
 import Refreshveh from "../refresh/refreshveh.js";
-import Candidat from './condidat/condidat.js'
-import Veh1 from './vehicule/veh1'
+import Candidat from './Candidate/Candidate'
+import Veh1 from './Ressources/veh1'
 import Navemp from './navbar/navbaremp.js';
 import Footer from "../home1/components/Footer.js";
 

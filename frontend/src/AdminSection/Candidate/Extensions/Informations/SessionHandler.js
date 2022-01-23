@@ -1,32 +1,32 @@
 import{React,Component} from 'react'
-import './stylecompocondidat.css'
-import Buttonupdateseance from './buttons/buttonupdateseance'
+import '../stylecompocondidat.css'
+import Buttonupdateseance from '../Buttons/UpdateSession'
 
-class Prochainescience extends Component{
+class NextSession extends Component{
     render(){
-        const {cin,date,heure,type}=this.props
+        const {CIN,Date,Time,Type}=this.props
         
         return(
             <div>
                 <fieldset className='prochaine-science'>
-                    <legend><h1>Prochain Science</h1></legend>
+                    <legend><h1>Next Session</h1></legend>
                     <table>
                         <tbody>
                             <tr>
-                                <td>Date:</td>
-                                <td>{date}</td>
+                                <td>Date :</td>
+                                <td>{Date}</td>
                                 <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-                                <td><Buttonupdateseance cin1={cin} /></td>
+                                <td><Buttonupdateseance cin1={CIN} /></td>
                                 
                             </tr>
                             <tr>
-                                <td>Heure:</td>
-                                <td>{heure}</td>
+                                <td>Time :</td>
+                                <td>{Time}</td>
                                
                             </tr>
                             <tr>
-                                <td>Type de science:</td>
-                                <td>{type}</td>
+                                <td>Type of Session:</td>
+                                <td>{Type}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -38,4 +38,4 @@ class Prochainescience extends Component{
     }
 
 }
-export default Prochainescience
+export default NextSession

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 import logo from './icon/logo.png'
 
-class Navemp extends Component
+class NavBar extends Component
 {
 
     
@@ -17,8 +17,8 @@ class Navemp extends Component
                     <ul>
                         <br></br>
                        <li>
-                         <Link to="/gcondidat" >Gestion condidat</Link> 
-                         <Link to="/vehicule" >Gestion vehicule</Link> 
+                         <Link to="/gcondidat" >Candidate Management</Link> 
+                         <Link to="/vehicule" >Vehicules Management</Link> 
                       </li>
                  </ul>
               </nav>
@@ -27,4 +27,4 @@ class Navemp extends Component
         )
     }
 }
-export default Navemp
+export default NavBar

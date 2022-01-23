@@ -1,29 +1,29 @@
 import { React} from 'react';
-import '../stylecompocondidat.css'
+import './stylecompocondidat.css'
 import { useHistory } from 'react-router';
 
-export default function Updateseance({idp}) {
-    const history = useHistory();
-    const handlesubmit = () => {
-        let date = document.getElementById('ncdate').value;
-        let time = document.getElementById('nctime').value;
-        let type = document.getElementById('nctype').value;
-        const data = {
-            dateSession: date,
-            heureSession: time,
-            typeSession: type
+export default function UpdateSession({ID}) {
+    const History = useHistory();
+    const HandleSubmit = () => {
+        let Date = document.getElementById('TempDate').value;
+        let Time = document.getElementById('TempTime').value;
+        let Type = document.getElementById('TempType').value;
+        const Data = {
+            DateSession: Date,
+            TimeSession: Time,
+            TypeSession: Type
         };
-        if(date===''){alert('la date de seance prochain est vide')}
+        if(Date===''){alert('Date of next Session is Empty')}
         else {
-        fetch(`http://localhost:8000/api/candidats/session/${idp}`,
-            {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then((res) => res.json());} history.push('/gcondidat/save')
+            fetch(`http://localhost:8000/api/candidats/session/${ID}`,
+                {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(Data)
+                })
+                .then((res) => res.json());} History.push('/gcondidat/save')
     }
     return (
         <div className='formnewcandidat'>
@@ -31,23 +31,23 @@ export default function Updateseance({idp}) {
                 <table >
                     <tbody >
                         <tr>
-                            <td>date </td>
-                            <td><input type='date' id='ncdate' required></input> </td>
+                            <td>Date :</td>
+                            <td><input type='date' id='TempDate' required></input> </td>
                         </tr>
                         <tr>
-                            <td>heure</td>
-                            <td><input type='time' id='nctime' required></input> </td>
+                            <td>Time :</td>
+                            <td><input type='time' id='TempTime' required></input> </td>
                         </tr>
                         <tr>
-                            <td>type de seance </td>
-                            <td><select id='nctype'>
+                            <td>Type Of Session :</td>
+                            <td><select id='TempType'>
                                 <option name='code' value='code' selected>Code</option>
-                                <option name='conduit' value='conduit'>Conduit</option>
+                                <option name='conduit' value='conduit'>Driving</option>
                             </select>
                             </td>
 
                         </tr>
-                        <button id='boo3' onClick={handlesubmit}>confirmer</button>
+                        <button id='boo3' onClick={HandleSubmit}>Submit</button>
 
                     </tbody>
                 </table>

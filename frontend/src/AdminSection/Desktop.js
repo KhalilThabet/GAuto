@@ -7,21 +7,21 @@ import {
   Redirect
 } from "react-router-dom";
 
-import'./acceuiladmin.css'
+import'./Desktop.css'
 
 import Refreshcond from "../refresh/refreshcond.js";
 import Refreshemp from "../refresh/refreshemp.js";
 import Refreshveh from "../refresh/refreshveh.js";
 
-import Condidat from './condidat/condidat.js'
-import Veh1 from './vehicule/veh1'
-import Emp1 from './Staff/emp1.js'
+import Condidat from './Candidate/Candidate'
+import Veh1 from './Ressources/veh1'
+import Emp1 from './Staff/Staff.js'
 import Nav from './navbar/navbar.js';
 import Footer from "../home1/components/Footer.js";
 
 //routing reserver pour l'utilisateur "admin"
 
-export default function Acceuiladmin({authorized}) {
+export default function DesktopAdmin({authorized}) {
   if(!authorized){
     return <Redirect to='/'/>
   }

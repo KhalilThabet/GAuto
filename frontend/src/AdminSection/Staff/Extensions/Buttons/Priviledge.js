@@ -4,8 +4,6 @@ import '../../style2.css'
 import Formamodifier from './formamodifier.js'
 
 
-
-
 function Buttonmod() {
     const [open, setOpen] = React.useState(false)
     return (
