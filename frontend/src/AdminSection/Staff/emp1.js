@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import './style2.css'
-import Pop from './employecomponent/popupemp.js'
-import Ajouteremp from './employecomponent/button ajouteremp/ajouteremp.js';
-import Buttonmod from './employecomponent/buttonmodifier/button';
+import Pop from './Extensions/popupemp.js'
+import Ajouteremp from './Extensions/button ajouteremp/ajouteremp.js';
+import Buttonmod from './Extensions/Buttons/button';
 
 export default function Emp1() {
   const [searchteam, setsearchteam] = useState("");

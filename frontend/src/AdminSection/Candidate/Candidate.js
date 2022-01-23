@@ -1,10 +1,10 @@
 import { React, useState, useEffect } from 'react';
 import './stylecondidat.css';
-import Paiement from './componentcondidat/info_paiement.js';
-import Infopersonnel from './componentcondidat/info_pesonnel';
-import Prochainescience from './componentcondidat/prochain-science';
-import Prochaineexamen from './componentcondidat/prochaine-examen';
-import Buttonajouter from './componentcondidat/bouttonajouter/buttonajouter.js';
+import Paiement from './Extensions/Informations/PaymentDetails.js';
+import Infopersonnel from './Extensions/info_pesonnel';
+import Prochainescience from './Extensions/SessionPredictor';
+import Prochaineexamen from './Extensions/Predictors/ExamPredictor';
+import Buttonajouter from './Extensions/bouttonajouter/buttonajouter.js.js.js';
 import im from './photo.png'
 
 export default function Condidat() {

@@ -15,7 +15,7 @@ import Refreshveh from "../refresh/refreshveh.js";
 
 import Condidat from './condidat/condidat.js'
 import Veh1 from './vehicule/veh1'
-import Emp1 from './employe/emp1.js'
+import Emp1 from './Staff/emp1.js'
 import Nav from './navbar/navbar.js';
 import Footer from "../home1/components/Footer.js";
 

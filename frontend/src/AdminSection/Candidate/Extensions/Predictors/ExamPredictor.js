@@ -1,6 +1,6 @@
 import{React,Component} from 'react'
 import './stylecompocondidat.css'
-import Buttonupdateexamen from './buttons/buttonupdateexamen'
+import Buttonupdateexamen from '../Buttons/UpdateExam'
 class Prochaineexamen extends Component{
     render(){
         const {cin,date,heure,type}=this.props

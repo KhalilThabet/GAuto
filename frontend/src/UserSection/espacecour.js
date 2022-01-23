@@ -1,8 +1,8 @@
 import {React,  Component } from 'react';
 import './style.css';
 import im from './bodyinfo/moi.png'
-import Pop from './test1/popuptest.js';
-import Pop2 from './test2/popuptest.js'
+import Pop from './ExamSection/FirstTest/popuptest.js';
+import Pop2 from './ExamSection/SecondTest/popuptest.js'
 
 
 
