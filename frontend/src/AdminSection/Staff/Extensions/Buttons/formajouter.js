@@ -14,7 +14,7 @@ export default function Formajouter() {
         var TempService = document.getElementById('TempService').value;
         const data = {
             LastName: TempLName,
-            FirstName: TempLName,
+            FirstName: TempFName,
             CIN: TempCIN,
             Salary: TempSalary,
             Position: TempPosition,

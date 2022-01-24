@@ -3,7 +3,7 @@ import './style.css';
 import Prochainesciencecond from './bodyinfo/SessionPredictor';
 import Prochaineexamencond from './bodyinfo/ExamPredictor';
 import Infopersonnelcond from './bodyinfo/PersonnelDetails';
-import Paiementcond from './bodyinfo/PayementDetails';
+import PaymentInformations from './bodyinfo/PayementDetails';
 import logo from './Items/mo2.png'
 
 import im from './Items/moi.png'
@@ -37,25 +37,25 @@ export default function Informations({PersonnelCIN}) {
 
         };
    
-        setid1(save.cin)
-        setid2(save.nom)
-        setid3(save.prenom)
-        setid4(save.num)
-        setid5(save.adresse)
-        setid6(save.mdp)
-        setid7(save.nbCode)
-        setid8(save.nbConduite)
-        setid9(save.nbExamCode)
-        setid10(save.nbExamConduite)
-        setid11(save.MontantPayer)
-        setid12(save.MontantResteAPayer)
-        setid13(save.dateSession)
-        setid14(save.heureSession)
-        setid15(save.typeSession)
-        setid16(save.dateExam)
-        setid17(save.heureExam)
-        setid18(save.typeExam)
-    },[isLoaded, save.cin, save.nom, save.prenom, save.num, save.adresse, save.mdp, save.nbCode, save.nbConduite, save.nbExamCode, save.nbExamConduite, save.MontantPayer, save.MontantResteAPayer, save.dateSession, save.heureSession, save.typeSession, save.dateExam, save.heureExam, save.typeExam, PersonnelCIN] )
+        setid1(save.CIN)
+        setid2(save.LastName)
+        setid3(save.FirstName)
+        setid4(save.PhoneNumber)
+        setid5(save.Adress)
+        setid6(save.Password)
+        setid7(save.NumberOfCodeSessions)
+        setid8(save.NumberOfDrivingSessions)
+        setid9(save.NumberOfCodeExams)
+        setid10(save.NumberOfDrivingExams)
+        setid11(save.AmountPaid)
+        setid12(save.RemainingPayment)
+        setid13(save.DateSession)
+        setid14(save.TimeSession)
+        setid15(save.TypeSession)
+        setid16(save.DateExam)
+        setid17(save.TimeExam)
+        setid18(save.TypeExam)
+    },[isLoaded, save.CIN, save.LastName, save.FirstName, save.PhoneNumber, save.Adress, save.Password, save.NumberOfCodeSessions, save.NumberOfDrivingSessions, save.NumberOfCodeExams, save.NumberOfDrivingExams, save.AmountPaid, save.RemainingPayment, save.DateSession, save.TimeSession, save.TypeSession, save.DateExam, save.TimeExam, save.TypeExam, PersonnelCIN] )
 
    
     return (
@@ -63,11 +63,11 @@ export default function Informations({PersonnelCIN}) {
         <div >
             <fieldset style={{ backgroundImage: `url(${im})` }} className='bodyinfoespacecond'>
                 <img src={logo} id="logoencentre" alt="logo"></img>
-                <Paiementcond ncod={id7} ncon={id8} nexcod={id9} nexcon={id10} mp={id11} mrp={id12} />
-                <Infopersonnelcond  cin={id1} nom={id2} prenom ={id3} num={id4} ad={id5}  mdp={id6} />
+                <PaymentInformations NumberOfCodeSessions={id7} NumberOfDrivingSessions={id8} NumberOfCodeExams={id9} NumberOfDrivingExams={id10} AmountPaid={id11} RemainingPayment={id12} />
+                <Infopersonnelcond  CIN={id1} LastName={id2} FirstName={id3} PhoneNumber={id4} Adress={id5}  Password={id6} />
 
-                <Prochaineexamencond date={id16} heure={id17} type={id18} />
-                <Prochainesciencecond date={id13}  heure={id14}  type={id15} />
+                <Prochaineexamencond Date={id16} Time={id17} Type={id18} />
+                <Prochainesciencecond Date={id13}  Time={id14}  Type={id15} />
 
 
 

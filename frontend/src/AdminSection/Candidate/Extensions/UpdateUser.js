@@ -86,8 +86,8 @@ export default function UpdateUser({ CIN , LastName, FirstName, PhoneNumber, Adr
                             <td>Password :</td>
                             <td><input type='text' id='TempPassword' placeholder={Password}></input> </td>
                         </tr>
-                        <button id='boo3' onClick={HandleSubmit} >confirmer</button>
-                        <button id='boo3' onClick={handleDelete}>supprimer</button>
+                        <button id='boo3' onClick={HandleSubmit}>Confirm</button>
+                        <button id='boo3' onClick={handleDelete}>Delete</button>
                     </tbody>
                 </table>
             </form>

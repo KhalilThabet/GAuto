@@ -3,24 +3,24 @@ import './stylecompocondidatcond.css'
 
 class Prochainesciencecond extends Component{
     render(){
-        const {date,heure,type}=this.props
+        const {Date,Time,Type}=this.props
         return(
             <div>
                 <fieldset className='prochaine-sciencecond'>
-                    <legend><h1>Prochain Science</h1></legend>
+                    <legend><h1>Next Session</h1></legend>
                     <table>
                         <tbody>
                             <tr>
-                                <td>Date:</td>
-                                <td>{date}</td>
+                                <td>Date :</td>
+                                <td>{Date}</td>
                             </tr>
                             <tr>
-                                <td>Heure:</td>
-                                <td>{heure}</td>
+                                <td>Time :</td>
+                                <td>{Time}</td>
                             </tr>
                             <tr>
-                                <td>Type de science:</td>
-                                <td>{type}</td>
+                                <td>Type Of Session:</td>
+                                <td>{Type}</td>
                             </tr>
                         </tbody>
                     </table>

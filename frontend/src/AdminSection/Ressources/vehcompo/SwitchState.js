@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/switchetat.css';
 
-function Switchetat ({ isOn, handleToggle })  {
+function SwitchState ({ isOn, handleToggle })  {
   return (
     <>
       <input
@@ -21,4 +21,4 @@ function Switchetat ({ isOn, handleToggle })  {
   );
 };
 
-export default Switchetat ;
+export default SwitchState ;

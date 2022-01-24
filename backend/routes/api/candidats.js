@@ -2,7 +2,7 @@ const express= require('express');
 const router = express.Router();
 const d=new Date();
 const date=(d.getDate()+"-"+d.getMonth()+"-"+d.getFullYear());
-const hour=d.getHours()+':'+d.getMinutes();
+const Time=d.getHours()+':'+d.getMinutes();
 const mongoose=require("mongoose");
 
 
@@ -18,7 +18,7 @@ router.get('/',(req,res)=>{
         .then(items => res.json(items))
 });
 router.get('/:id',(req,res)=>{
-  Item.findOne({cin:req.params.id})
+  Item.findOne({CIN:req.params.id})
       .sort({date : -1})
       .then(items => res.json(items))
 });
@@ -29,25 +29,25 @@ router.get('/:id',(req,res)=>{
 
 router.post('/',(req,res)=>{
     const newItem= new Item({
-        cin : req.body.cin,
-        mdp:req.body.mdp,
-        nom : req.body.nom,
-        prenom:req.body.prenom,
-        adresse : req.body.adresse,
-        mail:req.body.mail,
-        num:req.body.num,
-        nbCode:0,
-        nbConduite:0,
-        nbExamCode:0,
-        nbExamConduite:0,
-        MontantPayer:0,
-        MontantResteAPayer:0,
-        dateSession:date,
-        heureSession:hour,
-        typeSession:'code',
-        dateExam:date,
-        heureExam:hour,
-        typeExam:'code' ,
+        CIN : req.body.CIN,
+        Password:req.body.Password,
+        LastName : req.body.LastName,
+        FirstName:req.body.FirstName,
+        Adress : req.body.Adress,
+        AdressMail:req.body.AdressMail,
+        PhoneNumber:req.body.PhoneNumber,
+        NumberOfCodeSessions:0,
+        NumberOfDrivingSessions:0,
+        NumberOfCodeExams:0,
+        NumberOfDrivingExams:0,
+        AmountPaid:0,
+        RemainingPayment:0,
+        DateSession:date,
+        TimeSession:Time,
+        TypeSession:'code',
+        DateExam:date,
+        TimeExam:Time,
+        TypeExam:'code' ,
 
     });
 
@@ -56,7 +56,7 @@ router.post('/',(req,res)=>{
     
 });
 router.delete('/:js',(req,res)=>{
-  Item.findOne({cin:req.params.js})
+  Item.findOne({CIN:req.params.js})
    .then(item => item.remove().then(()=> res.json({success:true})))
    .catch(err => res.status(404).json({success:false}));
   
@@ -64,14 +64,14 @@ router.delete('/:js',(req,res)=>{
 
 
 router.put('/:cin',(req,res)=>{
-  Item.findOneAndUpdate({"cin":req.params.cin}, 
-  {"cin": req.body.cin,
-  "mdp": req.body.mdp,
-  "nom": req.body.nom,
-  "prenom": req.body.prenom,
-  "adresse": req.body.adresse,
-  "mail": req.body.mail,
-  "num": req.body.num }, { returnNewDocument: true })
+  Item.findOneAndUpdate({"CIN":req.params.CIN}, 
+  {"CIN": req.body.CIN,
+  "Password": req.body.Password,
+  "LastName": req.body.LastName,
+  "FirstName": req.body.FirstName,
+  "Adress": req.body.Adress,
+  "AdressMail": req.body.AdressMail,
+  "PhoneNumber": req.body.PhoneNumber }, { returnNewDocument: true })
   .then(res => res.status(200).json({success:true}))
   .catch(err => res.status(404).json({success:false}))
 })
@@ -79,17 +79,17 @@ router.put('/:cin',(req,res)=>{
 //modifier la date de seance prochaine
 router.put('/session/:ff',(req,res)=>{
   Item.findOneAndUpdate({cin:req.params.ff}, 
-  {"dateSession":req.body.dateSession,
-  "heureSession":req.body.heureSession,
-  "typeSession":req.body.typeSession }, { returnNewDocument: true })      
+  {"DateSession":req.body.DateSession,
+  "TimeSession":req.body.TimeSession,
+  "TypeSession":req.body.TypeSession }, { returnNewDocument: true })      
   .then(items => res.json(items)) 
 })
 //modifier la date de examen prochaine
 router.put('/examens/:vc',(req,res)=>{
-  Item.findOneAndUpdate({cin:req.params.vc}, 
-  { "dateExam":req.body.dateExam,
-    "heureExam":req.body.heureExam,
-    "typeExam":req.body.typeExam  }, { returnNewDocument: true })      
+  Item.findOneAndUpdate({CIN:req.params.vc}, 
+  { "DateExam":req.body.DateExam,
+    "TimeExam":req.body.TimeExam,
+    "TypeExam":req.body.TypeExam  }, { returnNewDocument: true })      
   .then(items => res.json(items)) 
 })
 
@@ -97,28 +97,28 @@ router.put('/examens/:vc',(req,res)=>{
 
 // les buttons de bloc paiment
 router.put('/nbSessioncode/:nbs',(req,res)=>{
-  Item.findOneAndUpdate({"cin":req.params.nbs}, 
-  {nbCode:req.body.nbCode,MontantResteAPayer:req.body.MontantResteAPayer}, { returnNewDocument: true })
+  Item.findOneAndUpdate({"CIN":req.params.nbs}, 
+  {NumberOfCodeSessions:req.body.NumberOfCodeSessions,RemainingPayment:req.body.RemainingPayment}, { returnNewDocument: true })
   .then(items => res.json(items))
 })
 router.put('/nbSessionconduit/:ns',(req,res)=>{
   Item.findOneAndUpdate({"cin":req.params.ns}, 
-  {nbConduite:req.body.nbConduite,MontantResteAPayer:req.body.MontantResteAPayer}, { returnNewDocument: true })
+  {NumberOfDrivingSessions:req.body.NumberOfDrivingSessions,RemainingPayment:req.body.RemainingPayment}, { returnNewDocument: true })
   .then(items => res.json(items))
 })
 router.put('/nbExamcode/:rr',(req,res)=>{
   Item.findOneAndUpdate({"cin":req.params.rr}, 
-  {nbExamCode:req.body.nbExamCode,MontantResteAPayer:req.body.MontantResteAPayer}, { returnNewDocument: true })
+  {NumberOfCodeExams:req.body.NumberOfCodeExams,RemainingPayment:req.body.RemainingPayment}, { returnNewDocument: true })
   .then(items => res.json(items))
 })
 router.put('/nbExamconduite/:er',(req,res)=>{
   Item.findOneAndUpdate({"cin":req.params.er}, 
-  {nbExamConduite:req.body.nbExamConduite,MontantResteAPayer:req.body.MontantResteAPayer}, { returnNewDocument: true })
+  {NumberOfDrivingExams:req.body.NumberOfDrivingExams,RemainingPayment:req.body.RemainingPayment}, { returnNewDocument: true })
   .then(items => res.json(items))
 })
 router.put('/montantpayee/:er',(req,res)=>{
   Item.findOneAndUpdate({"cin":req.params.er}, 
-  {MontantPayer:req.body.MontantPayer,MontantResteAPayer:req.body.MontantResteAPayer}, { returnNewDocument: true })
+  {AmountPaid:req.body.AmountPaid,RemainingPayment:req.body.RemainingPayment}, { returnNewDocument: true })
   .then(items => res.json(items))
 })
 

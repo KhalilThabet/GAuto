@@ -5,8 +5,6 @@ import logo from './icon/logo.png'
 
 class NavBar extends Component
 {
-
-    
     render(){
         return(
         

@@ -11,9 +11,9 @@ function Buttonmod() {
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             open={open}
-            trigger={<button id='ajouter'> Acces </button>}
+            trigger={<button id='ajouter'> Access </button>}
         >
-            <Modal.Header>Modifier l'acces</Modal.Header>
+            <Modal.Header>Modify Access</Modal.Header>
             <Modal.Content image>
 
                 <Modal.Description>

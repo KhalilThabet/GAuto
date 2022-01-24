@@ -3,55 +3,55 @@ const Schema = mongoose.Schema;
 
  
 const VehiculeSchema = new Schema ({
-    marque:{
+    Brand:{
         type : String,
         required : false
     },
-    immatricule :{
+    RegisterPlate :{
         type : String,
         required : false
     },
-    vignette : {
+    Sticker : {
         type:String,
         required : false
     },
-    assurance : {
+    Insurance : {
         type : String,
         required : false
     },
-    visiteTechnique : {
+    TechnicalInspection : {
         type : String,
         required : false
     },
-    vidange : {
+    Drainage : {
         type : String,
         required : false
     },
-    filtre : {
+    Filters : {
         type : String,
         required : false
     },
-    freinage : {
+    Breaks : {
         type : String,
         required : false
     },
-    pneues : {
+    Wheel : {
         type : String,
         required : false
     },
-    courroies :{
+    Belt :{
         type : String,
         required : false
     },
-    modele :{
+    Model :{
         type : String,
         required : false
     },
-    nbCheveau :{
+    NumberOfHorses :{
         type : String,
         required : false
     },
-    service :{
+    Service :{
         type : Boolean,
         required : false
     }

@@ -4,31 +4,31 @@ const Schema = mongoose.Schema;
 
  
 const EmployeeSchema = new Schema ({
-    nom:{
+    LastName:{
         type:String,
         required : false
     },
-    prenom : {
+    FirstName: {
         type:String,
         required : false
     },
-    cin : {
+    CIN: {
         type:String,
         required : false
     },
-    salaire : {
+    Salary: {
         type:String,
         required : false
     },
-    poste : {
+    Position: {
         type:String,
         required : false
     },
-    service : {
+    Service : {
         type:String,
         required : false
     },
-    telephone : {
+    PhoneNumber : {
         type:String,
         required: false
     }
