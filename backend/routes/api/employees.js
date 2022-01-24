@@ -11,58 +11,58 @@ router.get('/',(req,res)=>{
   
 router.post('/',(req,res)=>{
     const newItem= new Item({
-        "nom" : req.body.nom,
-        "prenom" : req.body.prenom,
-        "cin" : req.body.cin,
-        "salaire" : req.body.salaire,
-        "poste" : req.body.poste,
-        "service" : req.body.service,
-        "telephone" : req.body.telephone
+        "LastName" : req.body.LastName,
+        "FirstName" : req.body.FirstName,
+        "CIN" : req.body.CIN,
+        "Salary" : req.body.Salary,
+        "Position" : req.body.Position,
+        "Service" : req.body.Service,
+        "PhoneNumber" : req.body.PhoneNumber
     });
 
     newItem.save().then(item=>res.json(item));
     
 });
 router.delete('/:demp',(req,res)=>{
-    Item.findOne({cin:req.params.demp})
+    Item.findOne({CIN:req.params.demp})
      .then(item => item.remove().then(()=> res.json({success:true})))
      .catch(err => res.status(404).json({success:false}));
     
   });
 //modifier les infos de employees
   router.put('/nom/:nemp',(req,res)=>{
-    Item.findOneAndUpdate({"cin":req.params.nemp}, 
-    {nom:req.body.nom}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"CIN":req.params.nemp}, 
+    {LastName:req.body.LastName}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
   router.put('/prenom/:pemp',(req,res)=>{
-    Item.findOneAndUpdate({"cin":req.params.pemp}, 
-    {prenom:req.body.prenom}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"CIN":req.params.pemp}, 
+    {FirstName:req.body.FirstName}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
   router.put('/poste/:rremp',(req,res)=>{
-    Item.findOneAndUpdate({"cin":req.params.rremp}, 
-    {poste:req.body.poste}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"CIN":req.params.rremp}, 
+    {Position:req.body.Position}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
   router.put('/salaire/:erpem',(req,res)=>{
-    Item.findOneAndUpdate({"cin":req.params.erpem}, 
-    {salaire:req.body.salaire}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"CIN":req.params.erpem}, 
+    {Salary:req.body.Salary}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
   router.put('/telephone/:eremp',(req,res)=>{
     Item.findOneAndUpdate({"cin":req.params.eremp}, 
-    {telephone:req.body.telephone}, { returnNewDocument: true })
+    {PhoneNumber:req.body.PhoneNumber}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
   router.put('/service/:ep',(req,res)=>{
-    Item.findOneAndUpdate({"cin":req.params.ep}, 
-    {service:req.body.service}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"CIN":req.params.ep}, 
+    {Service:req.body.Service}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
   router.put('/cin/:mp',(req,res)=>{
-    Item.findOneAndUpdate({"cin":req.params.mp}, 
-    {cin:req.body.cin}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"CIN":req.params.mp}, 
+    {CIN:req.body.CIN}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
 

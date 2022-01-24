@@ -46,38 +46,38 @@ export default function Condidat() {
 
             <fieldset className='infocond'>
                 <div className='blocrecherchecond'>
-                    <input type='text' id='recherchecond' placeholder='Rechercher (Nom)' onChange={event => { setsearchteam(event.target.value); }} />
+                    <input type='text' id='recherchecond' placeholder='Search (Name)' onChange={event => { setsearchteam(event.target.value); }} />
                     <AddUserBtn />
                 </div>
                 {datas.filter((val) => {
-                    return val.nom.toLowerCase().startsWith(searchteam.toLowerCase());
+                    return val.LastName.toLowerCase().startsWith(searchteam.toLowerCase());
                 }).map((val, key) => {
-                    return (<div key='val.cin' id='listecond'>
+                    return (<div key='val.CIN' id='listecond'>
                         <table>
                             <tbody>
                                 <tr>
                                     <button id='tvcond' onClick={(e) => {
-                                        setid1(val.cin)
-                                        setid2(val.nom)
-                                        setid3(val.prenom)
-                                        setid4(val.num)
-                                        setid5(val.adresse)
-                                        setid6(val.mdp)
-                                        setid7(val.nbCode)
-                                        setid8(val.nbConduite)
-                                        setid9(val.nbExamCode)
-                                        setid10(val.nbExamConduite)
-                                        setid11(val.MontantPayer)
-                                        setid12(val.MontantResteAPayer)
-                                        setid13(val.dateSession)
-                                        setid14(val.heureSession)
-                                        setid15(val.typeSession)
-                                        setid16(val.dateExam)
-                                        setid17(val.heureExam)
-                                        setid18(val.typeExam)
+                                        setid1(val.CIN)
+                                        setid2(val.LastName)
+                                        setid3(val.FirstName)
+                                        setid4(val.PhoneNumber)
+                                        setid5(val.Adress)
+                                        setid6(val.Password)
+                                        setid7(val.NumberOfCodeSessions)
+                                        setid8(val.NumberOfDrivingSessions)
+                                        setid9(val.NumberOfCodeExams)
+                                        setid10(val.NumberOfDrivingExams)
+                                        setid11(val.AmountPaid)
+                                        setid12(val.RemainingAmount)
+                                        setid13(val.DateSession)
+                                        setid14(val.TimeSession)
+                                        setid15(val.TypeSession)
+                                        setid16(val.DateExam)
+                                        setid17(val.TimeExam)
+                                        setid18(val.TypeExam)
                                     }}   >
 
-                                        {val.nom} {val.prenom}
+                                        {val.LastName} {val.FirstName}
 
                                     </button>
                                 </tr>

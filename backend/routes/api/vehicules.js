@@ -15,19 +15,19 @@ router.get('/',(req,res)=>{
 });
 router.post('/',(req,res)=>{
     const newItem= new Item({
-        "vignette" : date,
-        "assurance" : date,
-        "visiteTechnique" :date,
-        "vidange" : date,
-        "filtre" : date,
-        "freinage" : date,
-        "pneues" : date,
-        "courroies" :date,
-        "immatricule" :req.body.immatricule,
-        "modele":req.body.modele,
-        "nbCheveau" :req.body.nbCheveau,
-        "marque":req.body.marque,
-        "service" :true
+        "Sticker" : date,
+        "Insurance" : date,
+        "TechnicalInspection" :date,
+        "Drainage" : date,
+        "Filters" : date,
+        "Breaks" : date,
+        "Wheel" : date,
+        "Belt" :date,
+        "RegisterPlate" :req.body.RegisterPlate,
+        "Model":req.body.Model,
+        "NumberOfHorses" :req.body.NumberOfHorses,
+        "Brand":req.body.Brand,
+        "Service" :true
     });
 
     newItem.save().then(item=>res.json(item));
@@ -35,58 +35,58 @@ router.post('/',(req,res)=>{
 });
 
 
-router.delete('/:imm',(req,res)=>{
-    Item.findOne({immatricule:req.params.imm})
+router.delete('/:tempRegisterPlate',(req,res)=>{
+    Item.findOne({RegisterPlate:req.params.tempRegisterPlate})
      .then(item => item.remove().then(()=> res.json({success:true})))
      .catch(err => res.status(404).json({success:false}));
     
   });
 
   //button update les dates
-  router.put('/assurance/:ze',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.ze}, 
-    {assurance:req.body.assurance}, { returnNewDocument: true }) 
+  router.put('/assurance/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Insurance:req.body.Insurance}, { returnNewDocument: true }) 
     .then(items => res.json(items))
   })
-  router.put('/visite/:vze',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.vze}, 
-    {visiteTechnique:req.body.visiteTechnique}, { returnNewDocument: true })
+  router.put('/visite/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {TechnicalInspection:req.body.TechnicalInspection}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
-  router.put('/vignette/:qze',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.qze}, 
-    {vignette:req.body.vignette}, { returnNewDocument: true })
+  router.put('/vignette/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Sticker:req.body.Sticker}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
-  router.put('/vidange/:aze',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.aze}, 
-    {vidange:req.body.vidange}, { returnNewDocument: true })
+  router.put('/vidange/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Drainage:req.body.Drainage}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
-  router.put('/pneues/:eze',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.eze}, 
-    {pneues:req.body.pneues}, { returnNewDocument: true })
+  router.put('/pneues/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Wheel:req.body.Wheel}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
-  router.put('/freinage/:zeq',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.zeq}, 
-    {freinage:req.body.freinage}, { returnNewDocument: true })
+  router.put('/freinage/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Breaks:req.body.Breaks}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
-  router.put('/filtre/:zez',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.zez}, 
-    {filtre:req.body.filtre}, { returnNewDocument: true })
+  router.put('/filtre/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Filters:req.body.Filters}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
-  router.put('/courroies/:er',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.er}, 
-    {courroies:req.body.courroies}, { returnNewDocument: true })
+  router.put('/courroies/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Belt:req.body.Belt}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
 
-  router.put('/service/:bb',(req,res)=>{
-    Item.findOneAndUpdate({"immatricule":req.params.bb}, 
-    {service:req.body.service}, { returnNewDocument: true })
+  router.put('/service/:tempRegisterPlate',(req,res)=>{
+    Item.findOneAndUpdate({"RegisterPlate":req.params.tempRegisterPlate}, 
+    {Service:req.body.Service}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
 

@@ -1,6 +1,6 @@
 import {React,useState } from 'react';
 import Popup from './popup.js';
-import Ajouteveh from './ajouteveh';
+import AddVehicule from '../AddVehicule';
 import iconplus from './icon/plus.png';
 import '../style/stylecompocondidat.css'
 /* le code css de button est ecrit dans stylecompocondidat.css
@@ -8,7 +8,7 @@ import '../style/stylecompocondidat.css'
 
 
  
-function Buttonajouter() {
+function AddBtn() {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -21,8 +21,8 @@ function Buttonajouter() {
     {isOpen && <Popup
       content={<>
       <div id='styleformaj'>
-        <b>les informations du vehicule</b>
-        <p id='st' ><Ajouteveh/></p>
+        <b>Vehicule's Informations</b>
+        <p id='st' ><AddVehicule/></p>
         </div>
       </>}
       handleClose={togglePopup}
@@ -30,4 +30,4 @@ function Buttonajouter() {
   </div>
 }
 
-export default Buttonajouter;
+export default AddBtn;

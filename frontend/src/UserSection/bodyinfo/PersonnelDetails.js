@@ -3,36 +3,36 @@ import './stylecompocondidatcond.css'
 
 class Infopersonnelcond extends Component{
     render(){
-        const {cin , nom, prenom, num, ad , mdp }=this.props
+        const {CIN , LastName, FirstName, PhoneNumber, Adress , Password }=this.props
         return(
             <div>
                 <fieldset className='info_personnelcond'>
-                    <legend><h1>Information Personel</h1></legend>
+                    <legend><h1>Personnel Information</h1></legend>
                     <table>
                         <tbody>
                         <tr>
                                 <td>CIN :</td>
-                                <td>{cin}</td>
+                                <td>{CIN}</td>
                             </tr>
                             <tr>
-                                <td>Nom :</td>
-                                <td>{nom}</td>
+                                <td>Last Name :</td>
+                                <td>{LastName}</td>
                             </tr>
                             <tr>
-                                <td>Prenom :</td>
-                                <td>{prenom}</td>
+                                <td>First Name :</td>
+                                <td>{FirstName}</td>
                             </tr>
                             <tr>
-                                <td>Num tel :</td>
-                                <td>{num}</td>
+                                <td>Phone Number:</td>
+                                <td>{PhoneNumber}</td>
                             </tr>
                             <tr>
-                                <td>Adresse :</td>
-                                <td>{ad}</td>
+                                <td>Adress :</td>
+                                <td>{Adress}</td>
                             </tr>
                             <tr>
-                                <td>Mot de passe :</td>
-                                <td>{mdp}</td>
+                                <td>Password :</td>
+                                <td>{Password}</td>
                             </tr>
                         </tbody>
                     </table>

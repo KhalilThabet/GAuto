@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style2.css'
-import iconmodifier from './Icons/modifier.png'
+import Icon from './Icons/modifier.png'
 import { useHistory } from 'react-router';
 
 export default function Information({ CIN, LastName, FirstName, Position, PhoneNumber, Salary, Service }) {
@@ -19,7 +19,7 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
     }
 
     const HandleLName = () => {
-        let newdate = document.getElementById('LastName').value;
+        let newdate = document.getElementById('TempLastName').value;
         if (newdate === '') alert('Invalid Operation !')
         else {
             fetch(`http://localhost:8000/api/employees/nom/${CIN}`,
@@ -34,7 +34,7 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
         }
     }
     const HandleFName = () => {
-        let newdate = document.getElementById('FirstName').value;
+        let newdate = document.getElementById('TempFirstName').value;
         if (newdate === '') alert('Invalid Operation !')
         else {
             fetch(`http://localhost:8000/api/employees/prenom/${CIN}`,
@@ -50,7 +50,7 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
 
     }
     const HandleCin = () => {
-        let newdate = document.getElementById('CIN').value;
+        let newdate = document.getElementById('TempCIN').value;
         if (newdate === '') alert('Invalid Operation !')
         else {
             fetch(`http://localhost:8000/api/employees/cin/${CIN}`,
@@ -65,7 +65,7 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
         }
     }
     const HandlePosition = () => {
-        let newdate = document.getElementById('Position').value;
+        let newdate = document.getElementById('TempPosition').value;
         if (newdate === '') alert('Invalid Operation !')
         else {
             fetch(`http://localhost:8000/api/employees/poste/${CIN}`,
@@ -80,7 +80,7 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
         }
     }
     const HandleSalary = () => {
-        let newdate = document.getElementById('salaireemp').value;
+        let newdate = document.getElementById('TempSalary').value;
         if (newdate === '') alert('operation inccorecrt !')
         else {
             fetch(`http://localhost:8000/api/employees/salaire/${CIN}`,
@@ -95,7 +95,7 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
         }
     }
     const HandlePhoneNumber = () => {
-        let newdate = document.getElementById('PhoneNumber').value;
+        let newdate = document.getElementById('TempPhoneNumber').value;
         if (newdate === '') alert('operation inccorecrt !')
         else {
             fetch(`http://localhost:8000/api/employees/telephone/${CIN}`,
@@ -110,7 +110,7 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
         }
     }
     const HandleService = () => {
-        let newdate = document.getElementById('Service').value;
+        let newdate = document.getElementById('TempService').value;
         if (newdate === '') alert('Invalid Operation !')
         else {
             fetch(`http://localhost:8000/api/employees/service/${CIN}`,
@@ -135,43 +135,43 @@ export default function Information({ CIN, LastName, FirstName, Position, PhoneN
                         <td>Last Name :</td>
                         <td>{LastName}</td>
                         <td><input size="10" type='text' id='TempLName'></input> </td>
-                        <td> <button onClick={HandleLName}><img src={iconmodifier} alt="icon" id="re"></img></button></td>
+                        <td> <button onClick={HandleLName}><img src={Icon} alt="icon" id="re"></img></button></td>
                     </tr>
                     <tr>
                         <td>First Name :</td>
                         <td>{FirstName}</td>
                         <td><input size="10" type='text' id='TempFName' placeholder=""></input> </td>
-                        <td> <button onClick={HandleFName}><img src={iconmodifier} alt="icon" id="re"></img></button></td>
+                        <td> <button onClick={HandleFName}><img src={Icon} alt="icon" id="re"></img></button></td>
                     </tr>
                     <tr>
                         <td>CIN :</td>
                         <td>{CIN}</td>
                         <td><input size="10" type='text' id='TempCIN' placeholder=""></input> </td>
-                        <td> <button onClick={HandleCin}><img src={iconmodifier} alt="icon" id="re"></img></button></td>
+                        <td> <button onClick={HandleCin}><img src={Icon} alt="icon" id="re"></img></button></td>
                     </tr>
                     <tr>
                         <td>Phone Number :</td>
                         <td>{PhoneNumber}</td>
                         <td><input size="10" type='text' id='TempPhoneNumber' placeholder=""></input> </td>
-                        <td> <button onClick={HandlePhoneNumber}><img src={iconmodifier} alt="icon" id="re"></img></button></td>
+                        <td> <button onClick={HandlePhoneNumber}><img src={Icon} alt="icon" id="re"></img></button></td>
                     </tr>
                     <tr>
                         <td>Position :</td>
                         <td>{Position}</td>
                         <td><input size="10" type='text' id='TempPosition'></input> </td>
-                        <td> <button onClick={HandlePosition}><img src={iconmodifier} alt="icon" id="re"></img></button></td>
+                        <td> <button onClick={HandlePosition}><img src={Icon} alt="icon" id="re"></img></button></td>
                     </tr>
                     <tr>
                         <td>Salary :</td>
                         <td>{Salary}</td>
                         <td><input size="10" type='text' id='TempSalary' placeholder=""></input> </td>
-                        <td> <button onClick={HandleSalary} ><img src={iconmodifier} alt="icon" id="re"></img></button></td>
+                        <td> <button onClick={HandleSalary} ><img src={Icon} alt="icon" id="re"></img></button></td>
                     </tr>
                     <tr>
                         <td>Service :</td>
                         <td>{Service}</td>
                         <td><select id='TempService'><option value='hors service'>Out of Order</option><option value='en service' selected>Working</option> </select> </td>
-                        <td> <button onClick={HandleService} ><img src={iconmodifier} alt="icon" id="re"></img></button></td>
+                        <td> <button onClick={HandleService} ><img src={Icon} alt="icon" id="re"></img></button></td>
                     </tr>
                 </tbody>
             </table>

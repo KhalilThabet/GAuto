@@ -4,15 +4,15 @@ const Schema = mongoose.Schema;
  
 
 const AuthSchema = new Schema ({
-    cin:{
+    CIN:{
         type:String,
         required : true
     },
-    password : {
+    Password : {
         type : String,
         required : true
     },
-    poste : {
+    Position : {
         type : String,
         required: true
     }

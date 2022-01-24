@@ -1,152 +1,152 @@
 import { React } from 'react'
 import './style/styleinfoveh.css'
 import iconmodifier from './icon/mod.png'
-import Switchetat from './switchetat';
+import SwitchState from './SwitchState';
 import { useHistory } from 'react-router';
 
 
-export default function Infoveh({ imm, modele, marque, vignette, visite, assurence, vidange,
-    filtre, freinage, pneues, courroies, service, nbCheveau }) {
-    const history = useHistory();
+export default function Infoveh({ RegisterPlate, Model, Brand, Sticker, TechnicalInspection, Insurance, Drainage,
+    Filters, Breaks, Wheel, Belt, Service, NumberOfHorses }) {
+    const History = useHistory();
     const handelassurance = () => {
         let newdate = document.getElementById('assurance').value;
-        if (newdate === '') alert('operation inccorecrt !')
+        if (newdate === '') alert('Invalid Operation !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/assurance/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/assurance/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "assurance": newdate })
+                    body: JSON.stringify({ "Insurance": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
     }
     const handelvignette = () => {
         let newdate = document.getElementById('vignette').value;
-        if (newdate === '') alert('operation inccorecrt !')
+        if (newdate === '') alert('Invalid Operation !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/vignette/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/vignette/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "vignette": newdate })
+                    body: JSON.stringify({ "Sticker": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
     }
     const handelvisite = () => {
         let newdate = document.getElementById('visite').value;
-        if (newdate === '') alert('operation inccorecrt !')
+        if (newdate === '') alert('Invalid Operation !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/visite/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/visite/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "visiteTechnique": newdate })
+                    body: JSON.stringify({ "TechnicalInspection": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
 
     }
     const handelvidange = () => {
         let newdate = document.getElementById('vidange').value;
-        if (newdate === '') alert('operation inccorecrt !')
+        if (newdate === '') alert('Invalid Operation !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/vidange/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/vidange/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "vidange": newdate })
+                    body: JSON.stringify({ "Drainage": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
     }
     const handelpneues = () => {
         let newdate = document.getElementById('pneues').value;
-        if (newdate === '') alert('operation inccorecrt !')
+        if (newdate === '') alert('Invalid Operation !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/pneues/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/pneues/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "pneues": newdate })
+                    body: JSON.stringify({ "Wheel": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
     }
     const handelfreinage = () => {
         let newdate = document.getElementById('freinage').value;
-        if (newdate === '') alert('operation inccorecrt !')
+        if (newdate === '') alert('Invalid Operation !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/freinage/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/freinage/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "freinage": newdate })
+                    body: JSON.stringify({ "Breaks": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
     }
     const handelfiltre = () => {
         let newdate = document.getElementById('filtre').value;
         if (newdate === '') alert('operation inccorecrt !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/filtre/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/filtre/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "filtre": newdate })
+                    body: JSON.stringify({ "Filters": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
     }
     const handelcourroies = () => {
         let newdate = document.getElementById('courroies').value;
         if (newdate === '') alert('operation inccorecrt !')
         else {
-            fetch(`http://localhost:8000/api/vehicules/courroies/${imm}`,
+            fetch(`http://localhost:8000/api/vehicules/courroies/${RegisterPlate}`,
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ "courroies": newdate })
+                    body: JSON.stringify({ "Belt": newdate })
                 })
             .then((res) => res.json());
-        } history.push('/vehicule/save')
+        } History.push('/vehicule/save')
     }
 
 
 
 
     const handelservice = () => {
-        let newdata=!service;
-        if(imm===''){alert("l operation est incorrect !")}
+        let newdata=!Service;
+        if(RegisterPlate===''){alert("Invalid Operation!")}
         else {
-        fetch(`http://localhost:8000/api/vehicules/service/${imm}`,
+        fetch(`http://localhost:8000/api/vehicules/service/${RegisterPlate}`,
         {method: 'PUT',
         headers: { 
             'Content-Type': 'application/json' 
         },
-        body: JSON.stringify({"service":newdata}) })
+        body: JSON.stringify({"Service":newdata}) })
         .then((res)=>res.json());
-        if(!newdata){alert("la vehicule "+marque+" met en service")}
-        else{alert("la vehicule "+marque+" est hors service")}
-        history.push('/vehicule/save');}
+        if(!newdata){alert("The Vehicule "+Brand+" is on service")}
+        else{alert("The Vehicule "+Brand+" is out of order")}
+        History.push('/vehicule/save');}
     }
 
 
@@ -154,26 +154,26 @@ export default function Infoveh({ imm, modele, marque, vignette, visite, assuren
     return (
         <div >
             <fieldset className='vehicule'>
-                <legend><h1>{marque}</h1></legend>
+                <legend><h1>{Brand}</h1></legend>
                 <table>
                     <tbody>
                         <tr>
-                            <td  >Imatricule :</td>
-                            <td id='imm' >{imm}</td>
+                            <td  >Register Plate :</td>
+                            <td id='RegisterPlate' >{RegisterPlate}</td>
                         </tr>
                         <tr>
-                            <td >Modele :</td>
-                            <td id='modele'>{modele}</td>
+                            <td >Model :</td>
+                            <td id='modele'>{Model}</td>
                         </tr>
                         <tr>
-                            <td>Nombre de cheveau : </td>
-                            <td id='ndch'>{nbCheveau}</td>
+                            <td>Number Of Horses : </td>
+                            <td id='ndch'>{NumberOfHorses}</td>
                         </tr>
                         <tr>
-                            <td>En service :</td>
-                            <td>oui</td>
-                            <td><Switchetat isOn={service} handleToiconmodifierle={handelservice} /> </td>
-                            <td>non</td>
+                            <td>In Service :</td>
+                            <td>YES</td>
+                            <td><SwitchState isOn={Service} handleToiconmodifierle={handelservice} /> </td>
+                            <td>NO</td>
                         </tr>
                     </tbody>
                 </table>
@@ -185,57 +185,57 @@ export default function Infoveh({ imm, modele, marque, vignette, visite, assuren
                 <table>
                     <tbody>
                         <tr>
-                            <td><p style={{ color: "rgba(9, 8, 22, 0.904)" }} >Papiers du véhicule</p> </td>
+                            <td><p style={{ color: "rgba(9, 8, 22, 0.904)" }} >Vehicule's Papers</p> </td>
                         </tr>
                         <tr>
-                            <td>validité vignette :</td>
-                            <td >{vignette} </td>
+                            <td>Sticker's validity :</td>
+                            <td >{Sticker} </td>
                             <td><input size="10" type='date' id='vignette' placeholder="modifier date"></input> </td>
                             <td> <button onClick={handelvignette}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                         <tr>
-                            <td>validité assurence :</td>
-                            <td  >{assurence}</td>
-                            <td><input size="10" type='date' id='assurance' placeholder="modifier date"></input> </td>
+                            <td>Insurance's validity:</td>
+                            <td  >{Insurance}</td>
+                            <td><input size="10" type='date' id='assurance' placeholder="Modify Date"></input> </td>
                             <td> <button onClick={handelassurance}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                         <tr>
-                            <td>validité visite technique :</td>
-                            <td >{visite}</td>
-                            <td><input size="10" type='date' id='visite' placeholder="modifier date"></input> </td>
+                            <td>Technical Inspection's Validity :</td>
+                            <td >{TechnicalInspection}</td>
+                            <td><input size="10" type='date' id='visite' placeholder="Modify Date"></input> </td>
                             <td> <button onClick={handelvisite}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                         <tr>
-                            <td><p style={{ color: "rgba(9, 8, 22, 0.904)" }} >Les entretiens quotidien</p> </td>
+                            <td><p style={{ color: "rgba(9, 8, 22, 0.904)" }} >Weekly Inspection</p> </td>
                         </tr>
                         <tr>
-                            <td>vidange :</td>
-                            <td >{vidange}</td>
-                            <td><input size="10" type='date' id='vidange' placeholder="modifier date"></input> </td>
+                            <td>Drainage :</td>
+                            <td >{Drainage}</td>
+                            <td><input size="10" type='date' id='vidange' placeholder="Modify Date"></input> </td>
                             <td> <button onClick={handelvidange}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                         <tr>
-                            <td>changement des filtres:</td>
-                            <td >{filtre}</td>
+                            <td>Changement Of Filters:</td>
+                            <td >{Filters}</td>
                             <td><input size="10" type='date' id='filtre'></input> </td>
                             <td> <button onClick={handelfiltre}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                         <tr>
-                            <td>éléments de freinage :</td>
-                            <td >{freinage}</td>
-                            <td><input size="10" type='date' id='freinage' placeholder="modifier date"></input> </td>
+                            <td>Breaks :</td>
+                            <td >{Breaks}</td>
+                            <td><input size="10" type='date' id='freinage' placeholder="Modify Date"></input> </td>
                             <td> <button onClick={handelfreinage}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                         <tr>
-                            <td>les pneus:</td>
-                            <td >{pneues}</td>
-                            <td><input size="10" type='date' id='pneues' placeholder="modifier date"></input> </td>
+                            <td>Wheels :</td>
+                            <td >{Wheel}</td>
+                            <td><input size="10" type='date' id='pneues' placeholder="Modify Date"></input> </td>
                             <td> <button onClick={handelpneues}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                         <tr>
-                            <td>les différentes courroies:</td>
-                            <td>{courroies}</td>
-                            <td><input size="10" type='date' id='courroies' placeholder="modifier date"></input> </td>
+                            <td>Difference Of Belts :</td>
+                            <td>{Belt}</td>
+                            <td><input size="10" type='date' id='courroies' placeholder="Modify Date"></input> </td>
                             <td> <button onClick={handelcourroies}><img src={iconmodifier} id="re" alt="icon"></img></button></td>
                         </tr>
                     </tbody>

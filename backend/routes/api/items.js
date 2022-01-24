@@ -9,7 +9,7 @@ const Item= require('../../models/Auth');
 // @desc GET ALL Items
 
 router.get('/',(req,res)=>{
-    //const data={cin:req.body.cin,password:req.body.password};
+    //const data={CIN:req.body.CIN,password:req.body.password};
 
     Item.find()
         .sort({date : -1})
@@ -20,12 +20,12 @@ router.get('/',(req,res)=>{
             res.send(JSON.stringify(items))})
 });
 router.get('/auth/:un/:pw',(req,res)=>{
-    Item.findOne({cin:req.params.un,password:req.params.pw})
+    Item.findOne({CIN:req.params.un,Password:req.params.pw})
         .sort({date : -1})
         .then(items => {
             
-            if((items)==null){res.send({reponce :false,})}
-            else{res.send({reponce :true,})}
+            if((items)==null){res.send({response :false,})}
+            else{res.send({response :true,})}
             res.send(JSON.stringify(items))
             console.log(JSON.stringify(items))})
 });
@@ -43,9 +43,9 @@ router.get('/auth',(req,res)=>{
 //nouveau utilisateur
 router.post('/',(req,res)=>{
     const newItem= new Item({
-        cin : req.body.cin,
-        password : req.body.password,
-        poste : req.body.password
+        CIN : req.body.CIN,
+        Password : req.body.Password,
+        Position : req.body.Position
     });
 
     newItem.save().then(item=>res.json(item));
@@ -56,31 +56,31 @@ router.post('/',(req,res)=>{
 // @desc delete an Item
 
 router.delete('/:js',(req,res)=>{
-    Item.findOne({cin:req.params.js})
+    Item.findOne({CIN:req.params.js})
      .then(item => item.remove().then(()=> res.json({success:true})))
      .catch(err => res.status(404).json({success:false}));
     
 });
 
 router.put('/dir',(req,res)=>{
-    Item.findOneAndUpdate({"poste":"admin",},  
-    {cin:req.body.cin,password:req.body.password}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"Position":"admin",},  
+    {CIN:req.body.CIN,Password:req.body.Password}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
   router.put('/emp',(req,res)=>{
-    Item.findOneAndUpdate({"poste":"emp",}, 
-    {cin:req.body.cin,password:req.body.password}, { returnNewDocument: true })
+    Item.findOneAndUpdate({"Position":"emp",}, 
+    {CIN:req.body.CIN,Password:req.body.Password}, { returnNewDocument: true })
     .then(items => res.json(items))
   })
 
 
   router.get('/accdir',(req,res)=>{
-    Item.findOne({poste:"admin"})
+    Item.findOne({Position:"admin"})
         .sort({date : -1})
         .then(items => res.json(items))
   });
   router.get('/accemp',(req,res)=>{
-    Item.findOne({poste:"emp"})
+    Item.findOne({Position:"emp"})
         .sort({date : -1})
         .then(items => res.json(items))
   });

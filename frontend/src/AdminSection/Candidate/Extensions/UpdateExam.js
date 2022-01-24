@@ -43,8 +43,8 @@ export default function UpdateExam({ID}) {
                         <tr>
                             <td>Type Of Exam :</td>
                             <td><select id='TempType'>
-                                <option value='code' selected>Code</option>
-                                <option value='conduit'>Driving</option>  
+                                <option value='Code' selected>Code</option>
+                                <option value='Driving'>Driving</option>  
 
                             </select> </td>
 

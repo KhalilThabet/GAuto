@@ -38,13 +38,13 @@ export default function Formajouter() {
         
     })
     const handlemoddir = () => {
-        var euser = document.getElementById('user').value;
-        var epassword = document.getElementById('passwd').value;
+        var TempUserAdmin = document.getElementById('TempUserAdmin').value;
+        var TempPasswordAdmin = document.getElementById('TempPasswordAdmin').value;
         const data = {
-            cin: euser,
-            password: epassword,
+            CIN: TempUserAdmin,
+            Password: TempPasswordAdmin,
         };
-        if(euser===''){alert('l operation est inccorect !')}
+        if(TempUserAdmin===''){alert('l operation est inccorect !')}
         else{
         fetch(`http://localhost:8000/api/items/dir`, {
             method: "PUT",
@@ -62,13 +62,13 @@ export default function Formajouter() {
 
     }
     const handlemodemp = () => {
-        var empuser = document.getElementById('useremp').value;
-        var emppassword = document.getElementById('passwdemp').value;
+        var TempUser = document.getElementById('TempUser').value;
+        var TempPassword = document.getElementById('TempPassword').value;
         const data = {
-            CIN: empuser,
-            Password: emppassword,
+            CIN: TempUser,
+            Password: TempPassword,
         };
-        if(empuser===''){alert('l operation est inccorect !')}
+        if(TempUser===''){alert('l operation est inccorect !')}
         else{
         fetch(`http://localhost:8000/api/items/emp`, {
             method: "PUT",
@@ -96,14 +96,14 @@ export default function Formajouter() {
                         <tr>
                             <td>CIN :</td>
                             <td>{id1}</td>
-                            <td><input size="10" type='text' id='user' required></input> </td>
+                            <td><input size="10" type='text' id='TempUserAdmin' required></input> </td>
                             <td rowSpan={2}><button id='bott'onClick={handlemoddir} >Modify</button></td>
                             
                         </tr>
                         <tr>
                             <td>Password :</td>
                             <td>{id2}</td>
-                            <td><input size="10" type='text' id='passwd' placeholder="" required></input> </td>
+                            <td><input size="10" type='text' id='TempPasswordAdmin' placeholder="" required></input> </td>
                         </tr>
                         
                     </tbody>
@@ -116,13 +116,13 @@ export default function Formajouter() {
                         <tr>
                             <td>CIN :</td>
                             <td>{id3}</td>
-                            <td><input size="10" type='text' id='useremp' required></input> </td>
+                            <td><input size="10" type='text' id='TempUser' required></input> </td>
                             <td rowSpan={2}><button id='bott' onClick={handlemodemp}>Modify</button></td>
                         </tr>
                         <tr>
                             <td>Password :</td>
                             <td>{id4}</td>
-                            <td><input size="10" type='text' id='passwdemp' placeholder="" required></input> </td>
+                            <td><input size="10" type='text' id='TempPassword' placeholder="" required></input> </td>
                         </tr>
                         
                     </tbody>

@@ -4,7 +4,7 @@ import PlusIcon from '../icons/plus.png';
 import MinusIcon from '../icons/moins.png';
 import { useHistory } from 'react-router';
 
-export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSessions, NumberOfCodeExams, NumberOfDrivingExams, AmountPaid, RemaingPayment }) {
+export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSessions, NumberOfCodeExams, NumberOfDrivingExams, AmountPaid, RemainingPayment }) {
     const History = useHistory();
     const ReduceNumberOfDrivingSessions = () => {
         fetch(`http://localhost:8000/api/candidats/nbSessionconduit/${ID}`,
@@ -13,7 +13,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfDrivingSessions": NumberOfDrivingSessions - 1, "RemaingPayment": RemaingPayment - 40 })
+                body: JSON.stringify({ "NumberOfDrivingSessions": NumberOfDrivingSessions - 1, "RemainingPayment": RemainingPayment - 40 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -24,7 +24,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfCodeSessions": NumberOfCodeSessions - 1, "RemaingPayment": RemaingPayment - 10 })
+                body: JSON.stringify({ "NumberOfCodeSessions": NumberOfCodeSessions - 1, "RemainingPayment": RemainingPayment - 10 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -35,7 +35,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfDrivingExams": NumberOfDrivingExams - 1, "RemaingPayment": RemaingPayment - 120 })
+                body: JSON.stringify({ "NumberOfDrivingExams": NumberOfDrivingExams - 1, "RemainingPayment": RemainingPayment - 120 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -46,7 +46,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfCodeExams": NumberOfCodeExams - 1, "RemaingPayment": RemaingPayment - 70 })
+                body: JSON.stringify({ "NumberOfCodeExams": NumberOfCodeExams - 1, "RemainingPayment": RemainingPayment - 70 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -57,7 +57,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfDrivingSessions": NumberOfDrivingSessions + 1, "RemaingPayment": RemaingPayment + 40 })
+                body: JSON.stringify({ "NumberOfDrivingSessions": NumberOfDrivingSessions + 1, "RemainingPayment": RemainingPayment + 40 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -68,7 +68,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfCodeSessions": NumberOfCodeSessions + 1, "RemaingPayment": RemaingPayment + 10 })
+                body: JSON.stringify({ "NumberOfCodeSessions": NumberOfCodeSessions + 1, "RemainingPayment": RemainingPayment + 10 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -79,7 +79,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfDrivingExams": NumberOfDrivingExams + 1, "RemaingPayment": RemaingPayment + 120 })
+                body: JSON.stringify({ "NumberOfDrivingExams": NumberOfDrivingExams + 1, "RemainingPayment": RemainingPayment + 120 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -90,7 +90,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "NumberOfCodeExams": NumberOfCodeExams + 1, "RemaingPayment": RemaingPayment + 70 })
+                body: JSON.stringify({ "NumberOfCodeExams": NumberOfCodeExams + 1, "RemainingPayment": RemainingPayment + 70 })
             })
             .then((res) => res.json()); History.push('/gcondidat/save')
     }
@@ -99,7 +99,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
         if(Money===''){alert("Invalid Operation !")}
         else {
         let ss = parseFloat(Money) + AmountPaid
-        let dd = RemaingPayment - parseFloat(Money)
+        let dd = RemainingPayment - parseFloat(Money)
         fetch(`http://localhost:8000/api/candidats/montantpayee/${ID}`,
             {
                 method: 'PUT',
@@ -152,7 +152,7 @@ export default function Payement({ ID, NumberOfCodeSessions, NumberOfDrivingSess
                         </tr>
                         <tr>
                             <td>Amount Remaining To Be Paid:</td>
-                            <td>{RemaingPayment}</td>
+                            <td>{RemainingPayment}</td>
                         </tr>
                     </tbody>
                 </table>

@@ -41,8 +41,8 @@ export default function UpdateSession({ID}) {
                         <tr>
                             <td>Type Of Session :</td>
                             <td><select id='TempType'>
-                                <option name='code' value='code' selected>Code</option>
-                                <option name='conduit' value='conduit'>Driving</option>
+                                <option name='Code' value='Code' selected>Code</option>
+                                <option name='Driving' value='Driving'>Driving</option>
                             </select>
                             </td>
 

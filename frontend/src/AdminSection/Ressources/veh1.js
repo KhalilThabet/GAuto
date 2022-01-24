@@ -1,7 +1,7 @@
 import {React,useState,useEffect} from 'react';
 import './style3.css';
-import Infoveh from './vehcompo/infoveh';
-import Buttonajouter from './vehcompo/bouttonajouter/buttonajouter.js';
+import Information from './vehcompo/Informations';
+import Buttonajouter from './vehcompo/Buttons/AddButton.js';
 import im from './mii2.png'
 
 
@@ -57,53 +57,53 @@ export default function Veh1()
                     {datas.filter((val)=>{
                       return val.marque.toLowerCase().startsWith(searchteam.toLowerCase());
                           }).map((val,key)=>{ 
-                           return (<div key='val.immatricule' id='listeveh'>
+                           return (<div key='val.RegisterPlate' id='listeveh'>
                                    <table>
                                       <tbody>
                                          <tr>
                                             <button id='tv' onClick={(e)=>{
-                                                setid1(val.assurance)
-                                                setid2(val.immatricule)
-                                                setid3(val.visiteTechnique)
-                                                setid4(val.marque)
-                                                setid5(val.modele)
-                                                setid6(val.vignette)
-                                                setid7(val.vidange)
-                                                setid8(val.filtre)
-                                                setid9(val.freinage)
-                                                setid10(val.pneues)
-                                                setid11(val.courroies)
-                                                setid12(val.service)
-                                                setid13(val.nbCheveau)
+                                                setid1(val.Insurance)
+                                                setid2(val.RegisterPlate)
+                                                setid3(val.TechnicalInspection)
+                                                setid4(val.Brand)
+                                                setid5(val.Model)
+                                                setid6(val.Sticker)
+                                                setid7(val.Drainage)
+                                                setid8(val.Filters)
+                                                setid9(val.Breaks)
+                                                setid10(val.Wheel)
+                                                setid11(val.Belt)
+                                                setid12(val.Service)
+                                                setid13(val.NumberOfHorses)
 
 
-                                                const d1=new Date(val.assurence)
-                                                const d2=new Date(val.visiteTechnique)
-                                                const d3=new Date(val.vignette)
-                                                const d4=new Date(val.vidange)
-                                                const d5=new Date(val.filtre)
-                                                const d6=new Date(val.freinage)
-                                                const d7=new Date(val.pneues)
-                                                const d8=new Date(val.courroies)
+                                                const d1=new Date(val.Insurance)
+                                                const d2=new Date(val.TechnicalInspection)
+                                                const d3=new Date(val.Sticker)
+                                                const d4=new Date(val.Drainage)
+                                                const d5=new Date(val.Filters)
+                                                const d6=new Date(val.Breaks)
+                                                const d7=new Date(val.Wheel)
+                                                const d8=new Date(val.Belt)
 
 
-                                                let ch= val.immatricule+'   '+val.marque+'\n'
+                                                let ch= val.RegisterPlate+'   '+val.Brand+'\n'
                                                 const cc=ch;
-                                                if(d1<day) ch=ch+'-la validite d assurence est expireé \n'
-                                                if(d2<day) ch=ch+'-la validite de visite est expireé \n'
-                                                if(d3<day) ch=ch+'-la validite de vignette est expireé \n'
-                                                if(d4<day) ch=ch+'- vidange est demendées\n '
-                                                if(d5<day) ch=ch+'-les filtres  \n'
-                                                if(d6<day) ch=ch+'-le systeme de freinage \n'
-                                                if(d7<day) ch=ch+'-les pneues \n'
-                                                if(d8<day) ch=ch+'-les courroies'
+                                                if(d1<day) ch=ch+'-The validity of the insurance has expired \n'
+                                                if(d2<day) ch=ch+'-The validity of the inspection has expired \n'
+                                                if(d3<day) ch=ch+'-The validity of the sticker has expired \n'
+                                                if(d4<day) ch=ch+'-Drainage is requested\n '
+                                                if(d5<day) ch=ch+'-Filters needs maintenance  \n'
+                                                if(d6<day) ch=ch+'-The breaks needs maintenance \n'
+                                                if(d7<day) ch=ch+'-Wheels needs maintenance \n'
+                                                if(d8<day) ch=ch+'-Belts needs maintenance'
                                                 if(ch!==cc) alert(ch)
                                                 
                                                 
                                                 
                                                     }}   >
 
-                                            {val.immatricule}  -  {val.marque} 
+                                            {val.RegisterPlate}  -  {val.Brand} 
                                             </button>
                                          </tr>
                                     </tbody>
@@ -112,10 +112,10 @@ export default function Veh1()
                                    })}
                 </fieldset>
                 <fieldset className='bodyinfoveh' style={{ backgroundImage: `url(${im})` }}  >
-                <Infoveh imm={id2} modele={id5} marque={id4}
-                vignette={id6} assurence={id1} visite={id3} vidange={id7} 
-                filtre={id8} freinage={id9} pneues={id10} courroies={id11}
-                service={id12} nbCheveau={id13}
+                <Information RegisterPlate={id2} Model={id5} Brand={id4}
+                Sticker={id6} Insurance={id1} TechnicalInspection={id3} Drainage={id7} 
+                Filters={id8} Breaks={id9} Wheel={id10} Belt={id11}
+                Service={id12} NumberOfHorses={id13}
 
                 />
                 

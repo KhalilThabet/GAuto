@@ -4,79 +4,79 @@ const Schema = mongoose.Schema;
 
 
 const CandidatSchema = new Schema ({
-    cin:{
+    CIN:{
         type:String,
         required : false
     },
-    nom:{
+    LastName:{
         type: String,
         required : false
     },
-    prenom:{
+    FirstName:{
         type : String,
         required : false
     },
-    adresse:{
+    Adress:{
         type:String,
         required : false
     },
-    mail:{
+    AdressMail:{
         type: String,
         required : false
     },
-    num:{
+    PhoneNumber:{
         type: String,
         required : false
     },
-    mdp:{
+    Password:{
         type: String,
         required : false
     },
-    nbCode:{
+    NumberOfCodeSessions:{
         type: Number,
         required : false
     },
-    nbConduite:{
+    NumberOfDrivingSessions:{
         type: Number,
         required : false
     },
-    nbExamCode:{
+    NumberOfCodeExams:{
         type: Number,
         required : false
     },
-    nbExamConduite:{
+    NumberOfDrivingExams:{
         type: Number,
         required : false
     },
-    MontantPayer:{
+    AmountPaid:{
         type: Number,
         required : false
     },
-    MontantResteAPayer:{
+    AmountRemaining:{
         type : Number,
         required : false
     },
-    dateSession:{
+    DateSession:{
         type: String,
         required : false
     },
-    heureSession:{
+    TimeSession:{
         type: String,
         required : false
     },
-    typeSession:{
+    TypeSession:{
         type: String,
         required : false
     },
-    dateExam:{
+    DateExam:{
         type: String,
         required : false
     },
-    heureExam:{
+    TimeExam:{
         type: String,
         required : false
     },
-    typeExam:{
+    TypeExam:{
         type: String,
         required : false
     }
