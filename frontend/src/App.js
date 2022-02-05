@@ -16,10 +16,10 @@ export default function App() {
 
   const [permessioncond, setpermmessioncond] = useState(false)  
   const [permessionadmin, setpermmessionadmin] = useState(false)
-  const handelauthorizedcondidat = function () {
+  const handleAuthorization = function () {
     setpermmessioncond(true);
   }
-  const handelauthorizedadmin = function () {
+  const handleAuthorizationSuper = function () {
     setpermmessionadmin(true);
   }
   const[idc,setidc]=useState('');
@@ -28,7 +28,7 @@ export default function App() {
   }
   return (
       <Switch>
-        <Route exact path='/' component={() => <Home funcondidat={handelauthorizedcondidat} funadmin={handelauthorizedadmin} idcondidat={changecin} />} />
+        <Route exact path='/' component={() => <Home funcondidat={handleAuthorization} funadmin={handleAuthorizationSuper} idcondidat={changecin} />} />
         <Route exact path='/condidat' component={() => <Acceuilcand authorized={permessioncond} idcon={idc}/>} />
         <Route exact path='/admin' component={() => <Acceuiladmin authorized={permessionadmin} />} />
         <Route exact path='/emp' component={() => <Acceuilemp authorized={permessionadmin} />} />
