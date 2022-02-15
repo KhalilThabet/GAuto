@@ -1,44 +1,42 @@
-
 import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from "react-router-dom";
-import'./Desktop.css'
-import Refreshcond from "../refresh/refreshcond.js";
-import Refreshveh from "../refresh/refreshveh.js";
-import Candidat from './Candidate/Candidate'
-import Veh1 from './Ressources/veh1'
-import Navemp from './navbar/navbaremp.js';
-import Footer from "../home1/components/Footer.js";
+import "./Desktop.css";
+import Reload from "../Routing/Reload.js";
+import Candidat from "./Candidate/Candidate";
+import Veh1 from "./Ressources/veh1";
+import Navemp from "./navbar/navbaremp.js";
+import Footer from "../Main/components/Footer.js";
 
 //routing reserver pour l'utilisateur "employee"
-export default function Acceuilemp({authorized}) {
-  if(!authorized){
-    return <Redirect to='/'/>
+export default function Acceuilemp({ authorized }) {
+  if (!authorized) {
+    return <Redirect to="/" />;
   }
   return (
-    <Router >
-      <div className = 'acceuil_admin'>
-        <Navemp/>
+    <Router>
+      <div className="acceuil_admin">
+        <Navemp />
         <Switch>
-          <Route exact path="/vehicule">
+          <Route path="/vehicule">
             <Veh1 />
           </Route>
-          <Route exact path="/gcondidat">
+          <Route path="/gcondidat">
             <Candidat />
           </Route>
-          <Route exact path='/vehicule/save'>
-            <Refreshveh />
+          <Route path="/vehicule/save">
+            <Reload Path='/vehicule'/>
           </Route>
-          <Route exact path='/gcondidat/save'>
-            <Refreshcond />
+          <Route path="/gcondidat/save">
+            <Reload Path='/gcondidat'/>
           </Route>
         </Switch>
       </div>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

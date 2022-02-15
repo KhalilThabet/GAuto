@@ -1,34 +1,31 @@
-
 import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 
-import'./Desktop.css'
+import "./Desktop.css";
 
-import Refreshcond from "../refresh/refreshcond.js";
-import Refreshemp from "../refresh/refreshemp.js";
-import Refreshveh from "../refresh/refreshveh.js";
+import Reload from "../Routing/Reload.js";
 
-import Condidat from './Candidate/Candidate'
-import Veh1 from './Ressources/veh1'
-import Emp1 from './Staff/Staff.js'
-import Nav from './navbar/navbar.js';
-import Footer from "../home1/components/Footer.js";
+import Condidat from "./Candidate/Candidate";
+import Veh1 from "./Ressources/veh1";
+import Emp1 from "./Staff/Staff.js";
+import Nav from "./navbar/navbar.js";
+import Footer from "../Main/components/Footer.js";
 
 //routing reserver pour l'utilisateur "admin"
 
-export default function DesktopAdmin({authorized}) {
-  if(!authorized){
-    return <Redirect to='/'/>
+export default function DesktopAdmin({ authorized }) {
+  if (!authorized) {
+    return <Redirect to="/" />;
   }
   return (
-    <Router >
-      <div className = 'acceuil_admin'>
-        <Nav/>
+    <Router>
+      <div className="acceuil_admin">
+        <Nav />
         <Switch>
           <Route exact path="/employe">
             <Emp1 />
@@ -36,22 +33,21 @@ export default function DesktopAdmin({authorized}) {
           <Route exact path="/vehicule">
             <Veh1 />
           </Route>
-          <Route exact path='/gcondidat' >
+          <Route exact path="/gcondidat">
             <Condidat />
           </Route>
-          <Route path='/vehicule/save'>
-            <Refreshveh />
+          <Route path="/vehicule/save">
+            <Reload Path="/vehicule"/>
           </Route>
-          <Route exact path='/employe/save'>
-            <Refreshemp />
+          <Route path="/employe/save">
+            <Reload Path="/employe"/>
           </Route>
-          <Route exact path='/gcondidat/save'>
-            <Refreshcond />
+          <Route path="/gcondidat/save">
+            <Reload Path="/gcondidat"/>
           </Route>
         </Switch>
       </div>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
-

@@ -1,34 +1,30 @@
-import {React,  Component } from 'react';
-import './style.css';
-import im from './Items/moi.png'
-import Pop from './ExamSection/FirstTest/popuptest.js';
-import Pop2 from './ExamSection/SecondTest/popuptest.js'
+import { React, Component } from "react";
+import "./Assets/Styles/style.css";
+import im from "./Assets/Images/moi.png";
+import Pop from "./ExamSection/FirstTest/popuptest.js";
+import Pop2 from "./ExamSection/SecondTest/popuptest.js";
 
-
-
-class Espacecour extends Component
-{
-    state={cours:[{c1:'cour1',q1:'qestion1',q2:'question2',},
-    {c1:'cour2',q1:'qestion1',q2:'question2',},
-    {c1:'cour3',q1:'qestion1',q2:'question2',},
-    {c1:'cour4',q1:'qestion1',q2:'question2',},
-
-
-
-],}
-    render(){
-        return(
-        
-            <div >
-                <fieldset style={{ backgroundImage: `url(${im})` }} className='field-test'>
-                <Pop />
-                <Pop2/>
-
-                </fieldset>
-               
-            </div>
-          
-        )
-    }
+class Espacecour extends Component {
+  state = {
+    cours: [
+      { c1: "cour1", q1: "qestion1", q2: "question2" },
+      { c1: "cour2", q1: "qestion1", q2: "question2" },
+      { c1: "cour3", q1: "qestion1", q2: "question2" },
+      { c1: "cour4", q1: "qestion1", q2: "question2" },
+    ],
+  };
+  render() {
+    return (
+      <div>
+        <fieldset
+          style={{ backgroundImage: `url(${im})` }}
+          className="field-test"
+        >
+          <Pop />
+          <Pop2 />
+        </fieldset>
+      </div>
+    );
+  }
 }
-export default Espacecour
+export default Espacecour;

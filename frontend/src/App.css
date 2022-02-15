@@ -1,22 +1,19 @@
-h1{
+h1 {
   color: rgb(5, 1, 1);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: larger;
-  
 }
-body{
-  font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: "Courier New", Courier, monospace;
 }
-button{
- border-radius: 5px;
- background-color:transparent;
- border: transparent;
- 
+button {
+  border-radius: 5px;
+  background-color: transparent;
+  border: transparent;
 }
 
- button:hover {
+button:hover {
   border-radius: 7775px;
-  background-color:rgb(253, 253, 253);
+  background-color: rgb(253, 253, 253);
   border: transparent;
-  
- }
+}
