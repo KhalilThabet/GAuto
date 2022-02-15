@@ -1,7 +1,7 @@
-import React from 'react';
-import './style/switchetat.css';
+import React from "react";
+import "./style/switchetat.css";
 
-function SwitchState ({ isOn, handleToggle })  {
+function SwitchState({ isOn, handleToggle }) {
   return (
     <>
       <input
@@ -11,14 +11,11 @@ function SwitchState ({ isOn, handleToggle })  {
         id={`react-switch-new`}
         type="checkbox"
       />
-      <label
-        className="react-switch-label"
-        htmlFor={`react-switch-new`}
-      >
+      <label className="react-switch-label" htmlFor={`react-switch-new`}>
         <span className={`react-switch-button`} />
       </label>
     </>
   );
-};
+}
 
-export default SwitchState ;
+export default SwitchState;
