@@ -6,15 +6,17 @@ import Acceuiladmin from "./AdminSection/Desktop";
 import Acceuilcand from "./UserSection/Desktop";
 import Acceuilemp from "./AdminSection/DesktopStaff";
 import "semantic-ui-css/semantic.min.css";
-//routing
-//on declare les variables genrales pour faire des liaisons entre le components
-//le variable permession assure le blockage d acces a une page a travers le URL
-//fonction handelauthorzied permet de change la permession et donner l acces pour utiliser le component donnee
-// le role de variable idc c est faire liaison entre l page home est l espace condidat
+
+/**
+ * We declare the general variables to link between components
+ * Variable Permission makes sure that it blocks the access to a page through the URL search bar
+ * The function handleAuthorization makes sure to change the permission access
+ * 
+ */
 
 export default function App() {
-  const [permessioncond, setpermmessioncond] = useState(false);
-  const [permessionadmin, setpermmessionadmin] = useState(false);
+  const [permissionCandidate, setpermmessioncond] = useState(false);
+  const [permissionAdmin, setpermmessionadmin] = useState(false);
   const handleAuthorization = function () {
     setpermmessioncond(true);
   };
@@ -42,18 +44,18 @@ export default function App() {
         exact
         path="/condidat"
         component={() => (
-          <Acceuilcand authorized={permessioncond} idcon={idc} />
+          <Acceuilcand authorized={permissionCandidate} idcon={idc} />
         )}
       />
       <Route
         exact
         path="/admin"
-        component={() => <Acceuiladmin authorized={permessionadmin} />}
+        component={() => <Acceuiladmin authorized={permissionAdmin} />}
       />
       <Route
         exact
         path="/emp"
-        component={() => <Acceuilemp authorized={permessionadmin} />}
+        component={() => <Acceuilemp authorized={permissionAdmin} />}
       />
     </Switch>
   );
