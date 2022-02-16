@@ -60,8 +60,3 @@ export default function App() {
     </Switch>
   );
 }
-
-/*setinfo(changeinfo={
-  immatricule:{valeur.immatricule} ,modele:{valeur.modele}, marque:{valeur.marque},
-  vig:'' ,assurence:'val.assurence', visite:'val.visite', de:'val.dernierentretien',
- })*/
