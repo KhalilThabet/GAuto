@@ -1,0 +1,321 @@
+.infoveh {
+  border: 2px rgb(255, 255, 255) solide;
+  height: 525px;
+  margin-top: 25px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: azure;
+  overflow-y: auto;
+  width: 100px;
+  float: left;
+  border-radius: 10px;
+}
+#rechercheveh {
+  width: 350px;
+  height: 35px;
+  font-size: 20px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+#listeveh {
+  background-color: transparent;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  margin-top: 5px;
+  width: 300px;
+  border-radius: 10px;
+}
+.blocrecherche {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(241, 237, 237, 0.52);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.blocrecherche:hover {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(190, 13, 13, 0.52);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#fi {
+  float: right;
+  padding: 5px;
+}
+#imgv {
+  width: 15px;
+  height: 15px;
+}
+#tv {
+  font-size: 20px;
+  width: 350px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 1px rgba(241, 237, 237, 0.52) solid;
+}
+#tv:hover {
+  font-size: 20px;
+  width: 350px;
+  border-radius: 10px;
+  color: rgb(185, 8, 8);
+  background-color: transparent;
+  border: 1px rgba(253, 6, 6, 0.835) solid;
+}
+#tv:active {
+  font-size: 20px;
+  width: 350px;
+  border-radius: 10px;
+  color: rgb(117, 20, 20);
+  background-color: transparent;
+  border: 1px rgba(138, 107, 107, 0.52) solid;
+}
+
+.bodyinfoveh {
+  border: 2px rgb(255, 255, 255) solide;
+  height: 525px;
+  margin-top: 25px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: azure;
+  width: 970px;
+  float: right;
+  border-radius: 10px;
+}
+
+/* overflow style*/
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(195, 1, 1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b4b4b4da;
+}
+/* Popup style */
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.boxveh {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+  border-radius: 10px;
+}
+
+.close-iconveh {
+  content: "x";
+  cursor: pointer;
+  position: fixed;
+  right: calc(26% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #b90808f3;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  border-radius: 210px;
+}
+.paiement {
+  position: absolute;
+  border: 1px rgb(255, 255, 136) solide;
+  width: 500px;
+
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-left: 430px;
+  float: right;
+  background-color: rgba(241, 237, 237, 0.52);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: azure;
+  border-radius: 10px;
+}
+.info_personnel {
+  border: 1px #ff87 solide;
+  width: 400px;
+  margin-left: 10px;
+  margin-top: 20px;
+  float: left;
+  background-color: rgba(241, 237, 237, 0.52);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: azure;
+  border-radius: 10px;
+}
+.prochaine-science {
+  position: absolute;
+  border: 1px #ff87 solide;
+  width: 400px;
+  margin-left: 10px;
+  margin-top: 320px;
+  float: left;
+  background-color: rgba(241, 237, 237, 0.52);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: azure;
+  border-radius: 10px;
+}
+
+.prochaine-examen {
+  position: absolute;
+  border: 1px #ff87 solide;
+  width: 400px;
+  margin-left: 430px;
+  margin-right: 10px;
+  margin-top: 320px;
+  float: right;
+  background-color: rgba(241, 237, 237, 0.52);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: azure;
+  border-radius: 10px;
+}
+legend h1 {
+  color: aliceblue;
+}
+
+/*button popup ajoute condidat*/
+#re {
+  margin-top: 3px;
+  width: 20px;
+  height: 20px;
+  color: black;
+  border-radius: 10px;
+}
+#styleformaj {
+  color: rgb(195, 1, 1);
+  text-align: center;
+}
+#st {
+  margin-left: 200px;
+}
+#boo3 {
+  width: 150px;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(195, 1, 1);
+  border-radius: 10px;
+}
+#plus {
+  border: transparent;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  cursor: default;
+  background-color: transparent;
+  position: relative;
+  margin-left: 150px;
+}
+/* ajouter candidat */
+.formupdateveh {
+  position: relative;
+  margin-left: -25%;
+}
+.vehicule {
+  border: 1px #ff87 solide;
+  width: 500px;
+
+  background-color: rgba(241, 237, 237, 0.52);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: azure;
+  margin-left: 425px;
+  border-radius: 10px;
+}
+#voi {
+  width: 300px;
+  height: 300px;
+  float: left;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  margin-left: 40px;
+  border-radius: 10px;
+}
+
+.papier {
+  border: 1px #ff87 solide;
+  width: 500px;
+  background-color: rgba(241, 237, 237, 0.52);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  color: azure;
+  float: right;
+
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+legend {
+  text-align: center;
+}
+#gif {
+  float: left;
+  width: 300px;
+  height: 300px;
+  filter: invert(200%);
+  -webkit-filter: invert(67%);
+  margin-left: 60px;
+}
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 50px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-switch-label .react-switch-button {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  transition: 0.2s;
+  background: rgb(0, 0, 0);
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.react-switch-label:active .react-switch-button {
+  width: 40px;
+}

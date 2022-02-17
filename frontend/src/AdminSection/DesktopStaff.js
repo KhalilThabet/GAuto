@@ -5,12 +5,12 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import "./Desktop.css";
+import "../Assets/AdminSection/Desktop.css";
 import Reload from "../Routing/Reload.js";
 import Candidat from "./Candidate/Candidate";
 import Veh1 from "./Ressources/veh1";
 import Navemp from "./navbar/navbaremp.js";
-import Footer from "../Main/components/Footer.js";
+import Footer from "../Main/Footer.js";
 
 //routing reserver pour l'utilisateur "employee"
 export default function Acceuilemp({ authorized }) {

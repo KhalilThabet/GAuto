@@ -1,6 +1,6 @@
 import React from "react";
-import "./AnimationLoading.css";
-import lod from "./Assets/loader.gif";
+import "../Assets/App.css";
+import lod from "../Assets/loader.gif";
 export default function Charge() {
   //REFRESH PAGE
   return (

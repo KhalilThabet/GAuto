@@ -1,11 +1,11 @@
 import { React, useState, useEffect } from "react";
-import "./CandidateStyle.css";
+import "../../Assets/AdminSection/Candidate/CandidateStyle.css";
 import Paiement from "./Extensions/Informations/PaymentDetails";
 import PersonnelInformation from "./Extensions/Informations/PersonnelDetails";
 import NextSession from "./Extensions/Informations/SessionHandler";
 import NextExam from "./Extensions/Informations/ExamHandler";
 import AddUserBtn from "./Extensions/Buttons/AddUser";
-import im from "./Decoration.png";
+import im from "../../Assets/AdminSection/Candidate/Decoration.png";
 
 export default function Condidat() {
   const [searchteam, setsearchteam] = useState("");

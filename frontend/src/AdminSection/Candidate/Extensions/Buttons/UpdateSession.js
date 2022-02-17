@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import Popup from "../Windows/Window.js";
 import UpdateSession from "../UpdateSession";
-import Icon from "../icons/mod.png";
-import "../stylecompocondidat.css";
+import Icon from "../../../../Assets/AdminSection/Candidate/icons/mod.png";
+import "../../../../Assets/AdminSection/Candidate/CandidateStyle.css";
 
 function UpdateSessionBtn({ CIN }) {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/switchetat.css";
+import "../../../Assets/AdminSection/Ressources/StyleRessources.css";
 
 function SwitchState({ isOn, handleToggle }) {
   return (

@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import "./style2.css";
+import "../../Assets/AdminSection/Staff/style2.css";
 import Window from "./Extensions/Windows/Window.js";
 import AddStaff from "./Extensions/Buttons/AddStaff";
 import PriviledgeBtn from "./Extensions/Buttons/Priviledge";

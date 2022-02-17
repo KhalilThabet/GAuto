@@ -9,8 +9,8 @@ import {
 import Navbar from "./Navbar.js";
 import CourseSection from "./CourseSection";
 import Informations from "./Informations";
-import Footer from "../Main/components/Footer.js";
-import "./Assets/Styles/style.css";
+import Footer from "../Main/Footer.js";
+import "../Assets/UserSection/Styles/style.css";
 
 export default function Acceuilcand({ authorized, IdCandidate }) {
   if (!authorized) {

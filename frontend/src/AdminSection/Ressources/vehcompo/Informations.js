@@ -1,6 +1,6 @@
 import { React } from "react";
-import "./style/styleinfoveh.css";
-import iconmodifier from "./icon/mod.png";
+import "../../../Assets/AdminSection/Ressources/StyleRessources.css";
+import iconmodifier from "../../../Assets/AdminSection/Ressources/icon/mod.png";
 import SwitchState from "./SwitchState";
 import { useHistory } from "react-router";
 

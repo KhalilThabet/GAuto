@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import Popup from "../Windows/Window";
 import AddUser from "../AddUser";
-import Icon from "../icons/plus.png";
-import "../stylecompocondidat.css";
+import Icon from "../../../../Assets/AdminSection/Candidate/icons/plus.png";
+import "../../../../Assets/AdminSection/Candidate/CandidateStyle.css";
 
 function AddBtn() {
   const [isOpen, setIsOpen] = useState(false);

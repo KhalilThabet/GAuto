@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import Popup from "./popup.js";
 import AddVehicule from "../AddVehicule";
-import iconplus from "./icon/plus.png";
-import "../style/stylecompocondidat.css";
+import iconplus from "../../../../Assets/AdminSection/Ressources/icon/plus.png";
+import "../../../../Assets/AdminSection/Ressources/StyleRessources.css";
 /* le code css de button est ecrit dans stylecompocondidat.css
  dans un bloc special a partir de ligne 49 */
 

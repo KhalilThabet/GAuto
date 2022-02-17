@@ -1,12 +1,12 @@
 import { React, useEffect, useState } from "react";
-import "./Assets/Styles/style.css";
+import "../Assets/UserSection/Styles/style.css";
 import Prochainesciencecond from "./bodyinfo/SessionPredictor";
 import Prochaineexamencond from "./bodyinfo/ExamPredictor";
 import Infopersonnelcond from "./bodyinfo/PersonnelDetails";
 import PaymentInformations from "./bodyinfo/PayementDetails";
-import logo from "./Assets/Images/mo2.png";
+import logo from "../Assets/UserSection/Images/mo2.png";
 
-import im from "./Assets/Images/moi.png";
+import im from "../Assets/UserSection/Images/moi.png";
 export default function Informations({ PersonnelCIN }) {
   const [save, setSave] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);

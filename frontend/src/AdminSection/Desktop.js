@@ -6,7 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import "./Desktop.css";
+import "../Assets/AdminSection/Desktop.css";
 
 import Reload from "../Routing/Reload.js";
 
@@ -14,7 +14,7 @@ import Condidat from "./Candidate/Candidate";
 import Veh1 from "./Ressources/veh1";
 import Emp1 from "./Staff/Staff.js";
 import Nav from "./navbar/navbar.js";
-import Footer from "../Main/components/Footer.js";
+import Footer from "../Main/Footer.js";
 
 //routing reserver pour l'utilisateur "admin"
 

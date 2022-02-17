@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../style2.css";
+import "../../../../Assets/AdminSection/Staff/style2.css";
 import { useHistory } from "react-router";
 
 export default function Formajouter() {

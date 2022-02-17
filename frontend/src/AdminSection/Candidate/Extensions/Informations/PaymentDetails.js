@@ -1,7 +1,7 @@
 import { React } from "react";
-import "../stylecompocondidat.css";
-import PlusIcon from "../icons/plus.png";
-import MinusIcon from "../icons/moins.png";
+import "../../../../Assets/AdminSection/Candidate/CandidateStyle.css";
+import PlusIcon from "../../../../Assets/AdminSection/Candidate/icons/plus.png";
+import MinusIcon from "../../../../Assets/AdminSection/Candidate/icons/moins.png";
 import { useHistory } from "react-router";
 
 export default function Payement({

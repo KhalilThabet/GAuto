@@ -1,4 +1,4 @@
-import "../Assets/style/Candidat_btn.css";
+import "../Assets/Main/style/Candidat_btn.css";
 import React from "react";
 
 function Candidatbtn({ handleCandidatclick }) {

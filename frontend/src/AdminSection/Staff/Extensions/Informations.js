@@ -1,6 +1,6 @@
 import React from "react";
-import "../style2.css";
-import Icon from "./Icons/modifier.png";
+import "../../../Assets/AdminSection/Staff/style2.css";
+import Icon from "../../../Assets/AdminSection/Staff/Icons/modifier.png";
 import { useHistory } from "react-router";
 
 export default function Information({

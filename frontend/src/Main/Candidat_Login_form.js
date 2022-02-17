@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, Redirect } from "react-router-dom";
 
-import "../Assets/style/Login_form.css";
+import "../Assets/Main/style/Login_form.css";
 
 function CandidatLoginform({
   isShowCandidatLogin,

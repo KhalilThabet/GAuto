@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import Popup from "../Windows/Window";
 import UpdateUser from "../UpdateUser";
-import Icon from "../icons/modifierinfoperson.png";
-import "../stylecompocondidat.css";
+import Icon from "../../../../Assets/AdminSection/Candidate/icons/modifierinfoperson.png";
+import "../../../../Assets/AdminSection/Candidate/CandidateStyle.css";
 
 function UpdateUserBtn({
   CIN,

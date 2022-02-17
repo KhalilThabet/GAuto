@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import Charge from "./AnimationLoading";
 
 //This function makes sure the databases are refreshed
+
 export default function Reload({Path}) {
   const history = useHistory();
   setTimeout(() => {

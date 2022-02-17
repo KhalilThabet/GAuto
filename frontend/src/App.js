@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import Home from "./Main/components/First_page.js";
-import "./App.css";
+import Home from "./Main/First_page.js";
+import "./Assets/App.css";
 import Acceuiladmin from "./AdminSection/Desktop";
 import Acceuilcand from "./UserSection/Desktop";
 import Acceuilemp from "./AdminSection/DesktopStaff";

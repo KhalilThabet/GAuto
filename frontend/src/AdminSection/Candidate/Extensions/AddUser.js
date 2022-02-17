@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useHistory } from "react-router-dom";
-import "./stylecompocondidat.css";
+import "../../../Assets/AdminSection/Candidate/CandidateStyle.css";
 
 export default function AddUser() {
   let History = useHistory();

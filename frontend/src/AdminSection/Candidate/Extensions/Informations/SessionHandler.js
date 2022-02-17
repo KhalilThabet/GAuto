@@ -1,5 +1,5 @@
 import { React, Component } from "react";
-import "../stylecompocondidat.css";
+import "../../../../Assets/AdminSection/Candidate/CandidateStyle.css";
 import Buttonupdateseance from "../Buttons/UpdateSession";
 
 class NextSession extends Component {

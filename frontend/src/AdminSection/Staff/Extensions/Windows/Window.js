@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "semantic-ui-react";
-import "../../style2.css";
+import "../../../../Assets/AdminSection/Staff/style2.css";
 import Infoemp from "../Informations.js";
 
 function ModalExampleModal({

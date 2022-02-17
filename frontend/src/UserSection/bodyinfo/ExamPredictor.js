@@ -1,5 +1,5 @@
 import { React, Component } from "react";
-import "../Assets/Styles/StyleBI.css";
+import "../../Assets/UserSection/Styles/StyleBI.css";
 
 class Prochaineexamencond extends Component {
   render() {

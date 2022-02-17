@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../Assets/style/First_page.css";
-import "../Assets/style/Login_form.css";
+import "../Assets/Main/style/First_page.css";
+import "../Assets/Main/style/Login_form.css";
 import CandidatLoginform from "./Candidat_Login_form";
 import AdminLoginform from "./Admin_Login_form";
 import Adminbtn from "./Admin_btn";

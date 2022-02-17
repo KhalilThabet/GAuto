@@ -1,5 +1,5 @@
 import { React } from "react";
-import "./stylecompocondidat.css";
+import "../../../Assets/AdminSection/Candidate/CandidateStyle.css";
 import { useHistory } from "react-router";
 
 export default function UpdateExam({ ID }) {

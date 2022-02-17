@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from "react";
-import "./style3.css";
+import "../../Assets/AdminSection/Ressources/StyleRessources.css";
 import Information from "./vehcompo/Informations";
 import Buttonajouter from "./vehcompo/Buttons/AddButton.js";
-import im from "./mii2.png";
+import im from "../../Assets/AdminSection/Ressources/icon/mii2.png";
 
 export default function Veh1() {
   const [searchteam, setsearchteam] = useState("");

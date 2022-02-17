@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Assets/Styles/style.css";
+import "../Assets/UserSection/Styles/style.css";
 class Itemscours extends Component {
   render() {
     const { items } = this.props;

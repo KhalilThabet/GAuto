@@ -1,7 +1,7 @@
 import { React, Component } from "react";
 
-import "../Assets/style/navbar.css";
-import logo from "../Assets/icons/logo.png";
+import "../Assets/Main/style/navbar.css";
+import logo from "../Assets/Main/icons/logo.png";
 
 class Navbarhome extends Component {
   render() {

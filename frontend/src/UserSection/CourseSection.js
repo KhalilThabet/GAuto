@@ -1,6 +1,6 @@
 import { React, Component } from "react";
-import "./Assets/Styles/style.css";
-import im from "./Assets/Images/moi.png";
+import "../Assets/UserSection/Styles/style.css";
+import im from "../Assets/UserSection/Images/moi.png";
 import Pop from "./ExamSection/FirstTest/popuptest.js";
 import Pop2 from "./ExamSection/SecondTest/popuptest.js";
 

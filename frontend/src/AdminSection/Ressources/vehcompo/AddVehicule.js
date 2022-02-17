@@ -1,5 +1,5 @@
 import { React } from "react";
-import "./style/stylecompocondidat.css";
+import "../../../Assets/AdminSection/Ressources/StyleRessources.css";
 import { useHistory } from "react-router";
 
 export default function Ajouteveh() {

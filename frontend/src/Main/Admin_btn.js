@@ -1,4 +1,4 @@
-import "../Assets/style/Admin_btn.css";
+import "../Assets/Main/style/Admin_btn.css";
 import React from "react";
 
 function Adminbtn({ handleAdminclick }) {
