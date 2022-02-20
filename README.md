@@ -5,7 +5,9 @@ Today, computer science has reached a prodigious technological evolution in diff
 It is this which pushed us to create during this training course an application for the management of a driving school accessible by users.
 Our application has three parts, a part accessible by the administrator (director) which allows him to manage the candidates, the cars and the employees. Another part accessible by the employees which allows to manage the candidates and the cars only. And a last part accessible by the candidates already registered which allows him to revise the code on line from their home thanks to a series of tests of code of the road.
 > Convention of typing : Camel Case
+
 > FrameWork and Environment Used: NodeJS | ReactJS
+
 > Node version v16.13.2 LTS
 
 ### Presentation of the requested functionalities of the application
