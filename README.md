@@ -25,11 +25,16 @@ For the candidates:
 - Code review through a series of tests
 ### DEMO
 
-<video src='./DEMO/Driving%20School%20Demo.mp4' />
+
+
+https://user-images.githubusercontent.com/69755000/154839086-c51de46e-b02f-487a-88b6-cfbfd84b5f7e.mp4
+
+
 
 
 
 ### USAGE
+
 Install dependencies
 ```linux
 $ cd frontend && npm install
