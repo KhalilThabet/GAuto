@@ -24,7 +24,8 @@ For the candidates:
 - Follow-up of payment information 
 - Code review through a series of tests
 ### DEMO
-https://drive.google.com/file/d/1sQ2mCz3dZaW8W_2uZQ1CbgkVGYNwnsQu/view?usp=sharing :
+
+https://github.com/KhalilThabet/GAuto/blob/main/DEMO/Driving%20School%20Demo.mp4
 
 ### USAGE
 Install dependencies
