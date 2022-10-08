@@ -15,8 +15,8 @@ import "semantic-ui-css/semantic.min.css";
  */
 
 export default function App() {
-  const [permissionCandidate, setpermmessioncond] = useState(false);
-  const [permissionAdmin, setpermmessionadmin] = useState(false);
+  const [permissionCandidate, setpermmessioncond] = useState(true);
+  const [permissionAdmin, setpermmessionadmin] = useState(true);
   const handleAuthorization = function () {
     setpermmessioncond(true);
   };

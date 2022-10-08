@@ -4,7 +4,25 @@ const d = new Date();
 const date = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear();
 const Time = d.getHours() + ":" + d.getMinutes();
 const mongoose = require("mongoose");
-
+function decrypter(data){
+  let n = 779;
+  let d = 103;
+  let output = "";
+  for (let element of data){
+    if (element==4){
+      output+=" ";
+    }
+    else{
+      let c = 1;
+      for (let i=0;i<d;i++){
+        c*=element;
+        c%=n;
+      }
+      output+=String.fromCharCode(c);
+    }
+  }
+  return output;
+}
 //Item model
 const Item = require("../../models/Candidats");
 
@@ -27,13 +45,13 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const newItem = new Item({
-    CIN: req.body.CIN,
-    Password: req.body.Password,
-    LastName: req.body.LastName,
-    FirstName: req.body.FirstName,
-    Adress: req.body.Adress,
-    AdressMail: req.body.AdressMail,
-    PhoneNumber: req.body.PhoneNumber,
+    CIN: decrypter(req.body.CIN),
+    Password: decrypter(req.body.Password),
+    LastName: decrypter(req.body.LastName),
+    FirstName: decrypter(req.body.FirstName),
+    Adress: decrypter(req.body.Adress),
+    AdressMail: decrypter(req.body.AdressMail),
+    PhoneNumber: decrypter(req.body.PhoneNumber),
     NumberOfCodeSessions: 0,
     NumberOfDrivingSessions: 0,
     NumberOfCodeExams: 0,
@@ -49,7 +67,6 @@ router.post("/", (req, res) => {
   });
 
   newItem.save().then((item) => res.json(item));
-  res.redirect("http://localhost:3000/gcondidat");
 });
 router.delete("/:js", (req, res) => {
   Item.findOne({ CIN: req.params.js })

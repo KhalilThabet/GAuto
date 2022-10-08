@@ -17,7 +17,7 @@ export default function Ajouteveh() {
       Brand: TempBrand,
     };
     if (TempRegisterPlate === "") {
-      alert("l operation est inccorect !");
+      alert("l'operation est inccorect !");
     } else {
       fetch("http://localhost:8000/api/vehicules", {
         method: "POST",

@@ -1,5 +1,5 @@
 {
-  "prefix":"server",
+  "prefix": "server",
   "name": "youtube-react",
   "version": "1.0.0",
   "description": "",
@@ -10,7 +10,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix autoecole",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
@@ -20,13 +20,13 @@
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "jsencrypt": "^3.2.1",
     "mongoose": "^6.2.0",
     "morgan": "^1.10.0",
-    "node-fetch": "^3.2.0"
+    "node-fetch": "^3.2.10"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.20"
   }
-  
 }

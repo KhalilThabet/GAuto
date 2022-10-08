@@ -14,9 +14,9 @@ import Footer from "../Main/Footer.js";
 
 //routing reserver pour l'utilisateur "employee"
 export default function Acceuilemp({ authorized }) {
-  if (!authorized) {
+  // if (!authorized) {
     return <Redirect to="/" />;
-  }
+  // }
   return (
     <Router>
       <div className="acceuil_admin">

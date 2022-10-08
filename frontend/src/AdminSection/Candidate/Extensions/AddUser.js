@@ -1,10 +1,8 @@
 import { React } from "react";
 import { useHistory } from "react-router-dom";
 import "../../../Assets/AdminSection/Candidate/CandidateStyle.css";
-
 export default function AddUser() {
   let History = useHistory();
-
   const HandleSubmit = () => {
     var TempLName = document.getElementById("TempLName").value;
     var TempFName = document.getElementById("TempFName").value;
@@ -13,14 +11,36 @@ export default function AddUser() {
     var TempAdressMail = document.getElementById("TempAdressMail").value;
     var TempPhoneNumber = document.getElementById("TempPhoneNumber").value;
     var TempPassword = document.getElementById("TempPassword").value;
+    const encryptMethod = (message)=>{
+      let a = 7;
+      let b = 779;
+      let x = [];
+      let m = 0;
+      for (let element of message){
+        if (element == ' '){
+          x.push(4);
+        }
+        else{
+          m = element.charCodeAt(0);
+          let c = 1;
+          for (let i=0;i<a;i++){
+            c*=m
+            c%=b;
+          }
+          x.push(c);
+        }
+        
+      }
+      return x;
+    }
     const data = {
-      LastName: TempLName,
-      FirstName: TempFName,
-      CIN: TempCIN,
-      Adress: TempAdress,
-      AdressMail: TempAdressMail,
-      PhoneNumber: TempPhoneNumber,
-      Password: TempPassword,
+      LastName: encryptMethod(TempLName),
+      FirstName: encryptMethod(TempFName),
+      CIN: encryptMethod(TempCIN),
+      Adress: encryptMethod(TempAdress),
+      AdressMail: encryptMethod(TempAdressMail),
+      PhoneNumber: encryptMethod(TempPhoneNumber),
+      Password: encryptMethod(TempPassword),
     };
 
     if (TempCIN === "") {
@@ -55,8 +75,7 @@ export default function AddUser() {
               <td>
                 <input
                   type="text"
-                  id="TempFName
-                    "
+                  id="TempFName"
                 ></input>{" "}
               </td>
             </tr>
